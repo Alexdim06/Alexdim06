@@ -1,0 +1,71 @@
+/* Typography */
+:root {
+  --ink: #111418;
+  --muted: #6c757d;
+  --border: rgba(17, 20, 24, 0.08);
+}
+
+html, body {
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--ink);
+}
+
+.text-primary-ink { color: var(--ink); }
+
+.section-pad { padding: 4rem 0; }
+
+.fw-extrabold { font-weight: 800; }
+.lh-tight { line-height: 1.1; }
+
+.shadow-sm { box-shadow: 0 8px 24px rgba(0,0,0,0.06) !important; }
+
+/* Hero */
+.py-6 { padding-top: 6rem; padding-bottom: 6rem; }
+.hero-gradient {
+  position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(80% 60% at 10% 10%, rgba(0,0,0,0.04), transparent 60%),
+              radial-gradient(60% 50% at 90% 20%, rgba(0,0,0,0.03), transparent 60%);
+}
+.hero-photo-wrapper { border-radius: 1rem; overflow: hidden; }
+.hero-photo { transition: transform .6s ease; }
+.hero-photo-wrapper:hover .hero-photo { transform: scale(1.03); }
+
+/* Timeline */
+.timeline { position: relative; }
+.timeline::before {
+  content: ""; position: absolute; left: 12px; top: 0; bottom: 0; width: 2px; background: var(--border);
+}
+.timeline-item { position: relative; padding-left: 44px; margin-bottom: 2rem; }
+.timeline-dot {
+  position: absolute; left: 6px; top: 4px; width: 14px; height: 14px; border-radius: 999px; background: var(--ink);
+}
+.timeline-content { background: #fff; border: 1px solid var(--border); border-radius: 1rem; padding: 1rem 1.25rem; }
+
+/* Cards */
+.project-card img { height: 220px; object-fit: cover; }
+
+/* Reveal rotate animation */
+.reveal-rotate { }
+.reveal-rotate .card-img-top { transition: transform .5s ease, filter .5s ease; }
+.reveal-rotate:hover .card-img-top { transform: scale(1.02); filter: saturate(1.03) contrast(1.02); }
+
+/* Subtle hover lift */
+.project-card { transition: transform .3s ease, box-shadow .3s ease; }
+.project-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.08) !important; }
+
+/* Removed scroll-snap intro */
+
+/* Navbar */
+.navbar-brand { letter-spacing: 0.2px; }
+.nav-link { transition: color .2s ease; }
+.nav-link:hover { color: var(--ink); }
+
+/* Utilities */
+.object-fit-cover { object-fit: cover; }
+
+/* AOS Fallback for prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  [data-aos] { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
+
+
