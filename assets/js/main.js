@@ -33,6 +33,19 @@ document.addEventListener('DOMContentLoaded', function () {
   // Contact form handling with Web3Forms
   var form = document.getElementById('contactForm');
   if (form) {
+    // Real-time validation for message length
+    var messageInput = document.getElementById('message');
+    var messageError = document.querySelector('.longer-message-error');
+    
+    if (messageInput && messageError) {
+      messageInput.addEventListener('input', function() {
+        if (messageInput.value.length >= 10) {
+          messageError.classList.remove('show');
+          messageInput.classList.remove('is-invalid');
+        }
+      });
+    }
+
     form.addEventListener('submit', async function (event) {
       event.preventDefault();
       event.stopPropagation();
@@ -43,6 +56,19 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
       }
 
+      // Minimum length validation for message
+      var message = document.getElementById('message');
+      var messageError = document.querySelector('.longer-message-error');
+      
+      if (message.value.length < 10) {
+        messageError.classList.add('show');
+        message.classList.add('is-invalid');
+        return;
+      } else {
+        messageError.classList.remove('show');
+        message.classList.remove('is-invalid');
+      }
+      
       // Get elements
       var submitBtn = document.getElementById('submit-btn');
       var submitText = document.getElementById('submit-text');
@@ -95,9 +121,5 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-// Vanilla tilt effect for project cards (lightweight custom)
-// Removed 3D tilt effect as requested
-
-// Removed scroll-snap intro observer
 
 
