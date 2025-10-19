@@ -63,6 +63,69 @@ html, body {
 /* Utilities */
 .object-fit-cover { object-fit: cover; }
 
+/* Contact Form Responsive Styles */
+#contactForm .form-control,
+#contactForm .form-label {
+  font-size: 1rem;
+}
+
+#contactForm .form-control {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#contactForm .form-control:focus {
+  border-color: var(--ink);
+  box-shadow: 0 0 0 0.2rem rgba(17, 20, 24, 0.1);
+}
+
+#contactForm .btn {
+  padding: 0.75rem 2rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.contact-image-wrapper {
+  min-height: 300px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  #contact .row {
+    flex-direction: column-reverse;
+  }
+  
+  .contact-image-wrapper {
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-pad {
+    padding: 3rem 0;
+  }
+  
+  #contactForm {
+    padding: 0.5rem;
+  }
+  
+  #contactForm .form-control {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+  
+  #contactForm .btn {
+    width: 100%;
+    padding: 0.875rem 1.5rem;
+  }
+  
+  .contact-image-wrapper {
+    min-height: 200px;
+  }
+}
+
 /* AOS Fallback for prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
   [data-aos] { opacity: 1 !important; transform: none !important; transition: none !important; }

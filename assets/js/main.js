@@ -30,16 +30,68 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Bootstrap validation for contact form
+  // Contact form handling with Web3Forms
   var form = document.getElementById('contactForm');
   if (form) {
-    form.addEventListener('submit', function (event) {
+    form.addEventListener('submit', async function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      // Check form validity
       if (!form.checkValidity()) {
-        event.preventDefault();
-        event.stopPropagation();
+        form.classList.add('was-validated');
+        return;
       }
-      form.classList.add('was-validated');
-    }, false);
+
+      // Get elements
+      var submitBtn = document.getElementById('submit-btn');
+      var submitText = document.getElementById('submit-text');
+      var submitSpinner = document.getElementById('submit-spinner');
+      var formMessage = document.getElementById('form-message');
+
+      // Show loading state
+      submitBtn.disabled = true;
+      submitSpinner.classList.remove('d-none');
+      submitText.textContent = 'Sending...';
+      formMessage.classList.add('d-none');
+
+      // Get form data
+      var formData = new FormData(form);
+
+      try {
+        // Send to Web3Forms API
+        var response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        });
+
+        var data = await response.json();
+
+        if (data.success) {
+          // Success message
+          formMessage.className = 'alert alert-success mb-3';
+          formMessage.textContent = 'Thank you! Your message has been sent successfully.';
+          formMessage.classList.remove('d-none');
+          form.reset();
+          form.classList.remove('was-validated');
+        } else {
+          // Error message
+          formMessage.className = 'alert alert-danger mb-3';
+          formMessage.textContent = 'Oops! Something went wrong. Please try again.';
+          formMessage.classList.remove('d-none');
+        }
+      } catch (error) {
+        // Network error
+        formMessage.className = 'alert alert-danger mb-3';
+        formMessage.textContent = 'Network error. Please check your connection and try again.';
+        formMessage.classList.remove('d-none');
+      } finally {
+        // Reset button state
+        submitBtn.disabled = false;
+        submitSpinner.classList.add('d-none');
+        submitText.textContent = 'Send';
+      }
+    });
   }
 });
 
