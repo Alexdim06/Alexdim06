@@ -1,0 +1,396 @@
+/* Valentine card style – romantic, hearts, reds & pinks */
+:root {
+    --valentine-red: #c41e3a;
+    --valentine-pink: #ff69b4;
+    --valentine-rose: #e8a0a0;
+    --valentine-cream: #fff5f5;
+    --valentine-gold: #d4af37;
+    --card-shadow: 0 8px 32px rgba(196, 30, 58, 0.2);
+    --font-script: 'Dancing Script', cursive;
+    --font-serif: 'Playfair Display', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-serif);
+    background: linear-gradient(135deg, #ffe4ec 0%, #ffc0cb 50%, #ffb6c1 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Sections */
+.section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.section.hidden {
+    display: none;
+}
+
+/* Question section – entrance transition */
+.question-section .question-card {
+    opacity: 0;
+    transform: scale(0.88) translateY(50px);
+}
+
+.question-section.question-visible .question-card {
+    animation: questionCardIn 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes questionCardIn {
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Valentine card base */
+.valentine-card {
+    background: linear-gradient(145deg, #fff 0%, var(--valentine-cream) 100%);
+    border: 3px solid var(--valentine-rose);
+    border-radius: 16px;
+    box-shadow: var(--card-shadow), inset 0 0 60px rgba(255, 182, 193, 0.15);
+    padding: 2.5rem;
+    max-width: 90vw;
+    position: relative;
+}
+
+.card-decoration {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.8;
+}
+.card-decoration.top-left { top: 12px; left: 12px; }
+.card-decoration.top-right { top: 12px; right: 12px; }
+
+/* ----- OPENING ----- */
+.opening-section {
+    background: radial-gradient(ellipse at center, #ffe4ec 0%, #ffc0cb 70%);
+}
+
+.opening-card {
+    text-align: center;
+    animation: cardAppear 1s ease-out;
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.opening-title {
+    font-family: var(--font-script);
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    color: var(--valentine-red);
+    margin-bottom: 0.5rem;
+}
+
+.opening-subtitle {
+    font-family: var(--font-script);
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    color: var(--valentine-pink);
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.opening-text {
+    color: #8b4355;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.btn-open {
+    font-family: var(--font-script);
+    font-size: 1.5rem;
+    padding: 0.75rem 2rem;
+    background: linear-gradient(180deg, var(--valentine-pink), var(--valentine-red));
+    color: white;
+    border: 2px solid var(--valentine-rose);
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(196, 30, 58, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-open:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(196, 30, 58, 0.4);
+}
+
+/* ----- CAROUSEL ----- */
+.carousel-section {
+    background: linear-gradient(180deg, #ffd6e0 0%, #ffe4ec 100%);
+}
+
+.carousel-card {
+    text-align: center;
+}
+
+.carousel-title {
+    font-family: var(--font-script);
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    color: var(--valentine-red);
+    margin-bottom: 1.5rem;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.carousel-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid var(--valentine-rose);
+    background: var(--valentine-cream);
+    color: var(--valentine-red);
+    font-size: 2rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.carousel-btn:hover {
+    background: var(--valentine-pink);
+    color: white;
+    transform: scale(1.1);
+}
+
+.carousel-track {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carousel-track-inner {
+    display: flex;
+    width: 100%;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    min-width: 0;
+    height: 600px;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--valentine-rose);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.carousel-dot:hover,
+.carousel-dot.active {
+    background: var(--valentine-red);
+    transform: scale(1.2);
+}
+
+.btn-next {
+    font-family: var(--font-script);
+    font-size: 1.3rem;
+    padding: 0.6rem 1.5rem;
+    background: linear-gradient(180deg, var(--valentine-pink), var(--valentine-red));
+    color: white;
+    border: 2px solid var(--valentine-rose);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-next:hover {
+    transform: scale(1.05);
+}
+
+/* ----- QUESTION ----- */
+.question-section {
+    background: linear-gradient(180deg, #ffc0cb 0%, #ffb6c1 100%);
+}
+
+.question-card {
+    text-align: center;
+    position: relative;
+}
+
+.hearts-bg {
+    position: absolute;
+    inset: 0;
+    border-radius: 13px;
+    background-image: radial-gradient(circle, rgba(255,105,180,0.1) 2px, transparent 2px);
+    background-size: 24px 24px;
+    pointer-events: none;
+}
+
+.question-title {
+    font-family: var(--font-script);
+    font-size: clamp(1.8rem, 6vw, 3rem);
+    color: var(--valentine-red);
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.buttons-wrap {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+/* Yes button – normal, clickable */
+.btn-yes {
+    font-family: var(--font-script);
+    font-size: 1.5rem;
+    padding: 0.9rem 2.2rem;
+    background: linear-gradient(180deg, #90ee90, #228b22);
+    color: white;
+    border: 2px solid #2e8b2e;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(34, 139, 34, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-yes:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(34, 139, 34, 0.5);
+}
+
+/* No button – runs away on hover; not clickable */
+.btn-no {
+    font-family: var(--font-script);
+    font-size: 1.2rem;
+    padding: 0.7rem 1.5rem;
+    background: linear-gradient(180deg, #ffb6c1, #ff69b4);
+    color: white;
+    border: 2px solid var(--valentine-rose);
+    border-radius: 50px;
+    cursor: default;
+    position: absolute;
+    transition: none;
+    user-select: none;
+    pointer-events: none; /* never register click – button runs away via JS */
+}
+
+/* ----- FIREWORKS ----- */
+#fireworks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+    display: none;
+}
+
+#fireworks.active {
+    display: block;
+}
+
+/* ----- POPUP ----- */
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    animation: fadeIn 0.3s ease;
+}
+
+.popup-overlay.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.popup-card {
+    background: linear-gradient(145deg, #fff 0%, var(--valentine-cream) 100%);
+    border: 3px solid var(--valentine-rose);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: var(--card-shadow), 0 0 60px rgba(255, 105, 180, 0.3);
+    animation: popIn 0.4s ease;
+}
+
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.7) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.popup-heart {
+    font-size: 4rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    animation: heartBeat 0.6s ease infinite;
+}
+
+@keyframes heartBeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+.popup-card h3 {
+    font-family: var(--font-script);
+    font-size: 2.2rem;
+    color: var(--valentine-red);
+    margin-bottom: 0.5rem;
+}
+
+.popup-card p {
+    color: #8b4355;
+    font-size: 1.1rem;
+}
