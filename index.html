@@ -1,73 +1,175 @@
 <!DOCTYPE html>
-<html lang="bg">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Дени ще бъдеш ли моята валентинка?</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aleksandar portfolio - full-stack developer profile, experience, skills, and contact.">
+  <title>Aleksandar | Full-Stack Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Opening / Intro -->
-    <section id="opening" class="section opening-section">
-        <div class="valentine-card opening-card">
-            <div class="card-decoration top-left">💕</div>
-            <div class="card-decoration top-right">💕</div>
-            <h1 class="opening-title">Дени</h1>
-            <p class="opening-subtitle">Ти си любимият ми човек и винаги ще бъдеш...</p>
-            <p class="opening-text">Отвори сърцето си и прегледай нашите спомени 💝</p>
-            <button id="openBtn" class="btn-open">Отвори картичката</button>
-        </div>
-    </section>
+  <div class="bg-orb orb-one" aria-hidden="true"></div>
+  <div class="bg-orb orb-two" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
 
-    <!-- Carousel with photos -->
-    <section id="carousel-section" class="section carousel-section hidden">
-        <div class="valentine-card carousel-card">
-            <h2 class="carousel-title">Нашите моменти 💕</h2>
-            <div class="carousel-container">
-                <button class="carousel-btn carousel-prev" aria-label="Предишна">‹</button>
-                <div class="carousel-track">
-                    <div class="carousel-track-inner">
-                        <div class="carousel-slide"><img src="photo-1.png" alt="Снимка 1"></div>
-                        <div class="carousel-slide"><img src="photo-2.png" alt="Снимка 2"></div>
-                        <div class="carousel-slide"><img src="photo-3.png" alt="Снимка 3"></div>
-                        <div class="carousel-slide"><img src="photo-4.png" alt="Снимка 4"></div>
-                        <div class="carousel-slide"><img src="photo-5.png" alt="Снимка 5"></div>
-                    </div>
-                </div>
-                <button class="carousel-btn carousel-next" aria-label="Следваща">›</button>
-            </div>
-            <div class="carousel-dots"></div>
-            <button id="toQuestionBtn" class="btn-next">Към въпроса →</button>
-        </div>
-    </section>
-
-    <!-- Question: Will you be my Valentine? -->
-    <section id="question-section" class="section question-section hidden">
-        <div class="valentine-card question-card">
-            <div class="hearts-bg"></div>
-            <h2 class="question-title">Ще бъдеш ли моята валентинка?</h2>
-            <div class="buttons-wrap">
-                <button id="yesBtn" class="btn-yes">Да 💕</button>
-                <button id="noBtn" class="btn-no">Не</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Fireworks canvas (shown on Yes) -->
-    <canvas id="fireworks"></canvas>
-
-    <!-- Popup: "Покажи се на врата" -->
-    <div id="popup" class="popup-overlay hidden">
-        <div class="popup-card">
-            <span class="popup-heart">💕</span>
-            <h3>Покажи се на врата!</h3>
-            <p>Чакам те там... 💝</p>
-        </div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#home" class="logo">Aleksandar<span class="logo-dot">.</span></a>
+      <button id="menuBtn" class="menu-btn" aria-label="Open navigation menu" aria-expanded="false">Menu</button>
+      <nav id="siteNav" class="site-nav">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <script src="script.js"></script>
+  <main>
+    <section id="home" class="hero section reveal">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <p class="eyebrow">Full-Stack Developer</p>
+          <h1>Practical, modern full-stack development with real business impact.</h1>
+          <p class="hero-text">
+            Passionate full-stack developer working with Angular, Strapi, Django, and CMS platforms,
+            with additional experience in Odoo ERP. Strong team player focused on problem solving,
+            continuous learning, and delivering measurable results.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">See Projects</a>
+            <a class="btn btn-secondary" href="#contact">Contact Me</a>
+          </div>
+        </div>
+        <div class="hero-card reveal">
+          <div class="profile-wrap">
+            <img src="assets/profile.png" alt="Aleksandar portrait" class="profile-image">
+          </div>
+          <h2>Profile highlights</h2>
+          <ul>
+            <li>2025-Present: Full-stack web development projects</li>
+            <li>Angular, Strapi, Django, and other CMS platforms</li>
+            <li>Additional experience with Odoo ERP</li>
+            <li>Strong collaboration and leadership mindset</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section reveal">
+      <div class="container">
+        <h2>About Me</h2>
+        <p class="section-text">
+          I build scalable frontend and backend solutions using modern web technologies. My approach combines
+          practical execution, clear communication, and ownership from idea to delivery.
+        </p>
+      </div>
+    </section>
+
+    <section id="experience" class="section section-alt reveal">
+      <div class="container">
+        <h2>Experience</h2>
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <h3>2025-Present: Full-Stack Developer</h3>
+            <p>Working on full-stack development projects using modern web technologies across frontend and backend.</p>
+          </article>
+          <article class="timeline-item reveal">
+            <h3>2022-2024: Auto Mechanic</h3>
+            <p>Worked with clients, performed diagnostics and repairs, and handled tools and inventory management.</p>
+          </article>
+          <article class="timeline-item reveal">
+            <h3>2021-2022: Florist</h3>
+            <p>Selling flowers, assisting customers, arranging merchandise, and maintaining an attractive store layout.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section reveal">
+      <div class="container">
+        <h2>Technical Skills</h2>
+        <div class="chip-grid">
+          <span class="chip reveal">Python</span>
+          <span class="chip reveal">JavaScript</span>
+          <span class="chip reveal">TypeScript</span>
+          <span class="chip reveal">React</span>
+          <span class="chip reveal">Angular</span>
+          <span class="chip reveal">Express.js</span>
+          <span class="chip reveal">Node.js</span>
+          <span class="chip reveal">SQL</span>
+          <span class="chip reveal">PostgreSQL</span>
+          <span class="chip reveal">Prisma ORM</span>
+          <span class="chip reveal">WebSocket</span>
+          <span class="chip reveal">JWT Auth</span>
+          <span class="chip reveal">Stripe</span>
+          <span class="chip reveal">Docker</span>
+          <span class="chip reveal">Strapi</span>
+          <span class="chip reveal">Django</span>
+          <span class="chip reveal">Odoo ERP</span>
+          <span class="chip reveal">CMS Platforms</span>
+        </div>
+        <h2 class="subsection-title">Soft Skills</h2>
+        <div class="chip-grid">
+          <span class="chip reveal">Public Relations</span>
+          <span class="chip reveal">Teamwork</span>
+          <span class="chip reveal">Time Management</span>
+          <span class="chip reveal">Leadership</span>
+          <span class="chip reveal">Effective Communication</span>
+          <span class="chip reveal">Critical Thinking</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section section-alt reveal">
+      <div class="container">
+        <h2>Featured Projects</h2>
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <h3>NestSyncFlow</h3>
+            <p>
+              Full-stack platform with React frontend, Express backend, PostgreSQL and Prisma data model,
+              JWT auth, WebSocket live updates, analytics dashboard, and Stripe-ready monetization flow.
+            </p>
+            <a href="#" target="_blank" rel="noreferrer">Add NestSyncFlow link</a>
+          </article>
+          <article class="project-card reveal">
+            <h3>Django Data Workflow</h3>
+            <p>Developed backend logic with relational database operations and practical API integrations.</p>
+            <a href="#" target="_blank" rel="noreferrer">Add project link</a>
+          </article>
+          <article class="project-card reveal">
+            <h3>CMS and ERP Integrations</h3>
+            <p>Worked with CMS tools and Odoo ERP to align business processes and technical execution.</p>
+            <a href="#" target="_blank" rel="noreferrer">Add project link</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section reveal">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="section-text">Open to collaboration, freelance work, and full-time opportunities.</p>
+        <div class="contact-links">
+          <a href="mailto:alex.06dimitrov@gmail.com">alex.06dimitrov@gmail.com</a>
+          <a href="https://github.com/Aleksandar" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/aleksandar-dimitrov-pya16/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Aleksandar. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
