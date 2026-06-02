@@ -24,8 +24,10 @@ navLinks.forEach((link) => {
 });
 
 const revealItems = document.querySelectorAll(".reveal");
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const tiltCards = document.querySelectorAll(".hero-card, .project-card");
 
-if ("IntersectionObserver" in window) {
+if ("IntersectionObserver" in window && !prefersReducedMotion) {
   const revealObserver = new IntersectionObserver(
     (entries, observer) => {
       entries.forEach((entry) => {
@@ -39,9 +41,28 @@ if ("IntersectionObserver" in window) {
   );
 
   revealItems.forEach((item, index) => {
-    item.style.transitionDelay = `${Math.min(index * 35, 350)}ms`;
+    item.style.transitionDelay = `${Math.min(index * 24, 220)}ms`;
     revealObserver.observe(item);
   });
 } else {
   revealItems.forEach((item) => item.classList.add("visible"));
+}
+
+if (!prefersReducedMotion) {
+  tiltCards.forEach((card) => {
+    card.addEventListener("mousemove", (event) => {
+      const rect = card.getBoundingClientRect();
+      const x = (event.clientX - rect.left) / rect.width;
+      const y = (event.clientY - rect.top) / rect.height;
+      const rotateY = (x - 0.5) * 6;
+      const rotateX = (0.5 - y) * 6;
+      card.style.setProperty("--rx", `${rotateX}deg`);
+      card.style.setProperty("--ry", `${rotateY}deg`);
+    });
+
+    card.addEventListener("mouseleave", () => {
+      card.style.setProperty("--rx", "0deg");
+      card.style.setProperty("--ry", "0deg");
+    });
+  });
 }
