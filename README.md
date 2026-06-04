@@ -3,10 +3,10 @@
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=Alexdim06&color=blueviolet" alt="Profile views" />
   <br /><br />
-  <a href="https://github.com/Alexdim06">
+  <a href="https://github.com/Alexdim06" style="text-decoration: none;">
     <img height="20" src="https://img.shields.io/github/followers/Alexdim06?label=Github%20Followers&color=purple&logo=github&style=flat" />
   </a>
-  <a href="https://www.linkedin.com/in/aleksandar-dimitrov-pya16/">
+  <a href="https://www.linkedin.com/in/aleksandar-dimitrov-pya16/" style="text-decoration: none;">
     <img height="20" src="https://img.shields.io/badge/LinkedIn-Profile-0A66C2?logo=linkedin&logoColor=white&style=flat" />
   </a>
 </p>
@@ -59,5 +59,3 @@ I work with Angular, Strapi, Django, CMS platforms, and Odoo ERP. I enjoy solvin
 - Email: `alex.06dimitrov@gmail.com`
 - LinkedIn: [aleksandar-dimitrov-pya16](https://www.linkedin.com/in/aleksandar-dimitrov-pya16/)
 - GitHub: [Alexdim06](https://github.com/Alexdim06)
-
-![snake svg](https://raw.githubusercontent.com/Alexdim06/Alexdim06/output/github-contribution-grid-snake-dark.svg)
