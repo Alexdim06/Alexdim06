@@ -1,6 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="90" viewBox="0 0 1200 90">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="90" viewBox="0 0 1200 90" role="img" aria-label="Animated technology flow divider">
+  <defs>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#c8ff47" stop-opacity="0"/>
+      <stop offset="0.25" stop-color="#c8ff47"/>
+      <stop offset="0.7" stop-color="#ff785a"/>
+      <stop offset="1" stop-color="#ff785a" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
   <path d="M0 45 C120 5 220 85 350 45 S580 5 720 45 S970 85 1200 45" fill="none" stroke="#303b31" stroke-width="1"/>
-  <path d="M0 45 C120 5 220 85 350 45 S580 5 720 45 S970 85 1200 45" fill="none" stroke="#c8ff47" stroke-width="2.5" stroke-linecap="round" stroke-opacity="0.7"/>
-  <circle cx="350" cy="45" r="7" fill="#0d110f" stroke="#c8ff47"/>
-  <circle cx="720" cy="45" r="7" fill="#0d110f" stroke="#c8ff47"/>
+  <path d="M0 45 C120 5 220 85 350 45 S580 5 720 45 S970 85 1200 45" fill="none" stroke="url(#line)" stroke-width="3" stroke-linecap="round" stroke-dasharray="180 1020">
+    <animate attributeName="stroke-dashoffset" values="1200;0" dur="8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="8s" repeatCount="indefinite"/>
+  </path>
+  <g fill="#0d110f" stroke="#c8ff47">
+    <circle cx="350" cy="45" r="7">
+      <animate attributeName="opacity" values="0.35;1;0.35" dur="4.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="720" cy="45" r="7">
+      <animate attributeName="opacity" values="0.35;1;0.35" dur="4.8s" begin="1.6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
 </svg>
