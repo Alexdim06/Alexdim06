@@ -20,6 +20,8 @@
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="scrollProgress" class="scroll-progress" aria-hidden="true"></div>
+  <div id="cursorGlow" class="cursor-glow" aria-hidden="true"></div>
   <div class="ambient ambient-one" aria-hidden="true"></div>
   <div class="ambient ambient-two" aria-hidden="true"></div>
 
@@ -103,6 +105,13 @@
       </div>
     </section>
 
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Angular</span><i>✦</i><span>Strapi</span><i>✦</i><span>Python</span><i>✦</i><span>Product thinking</span><i>✦</i><span>Accessible UI</span><i>✦</i>
+        <span>Angular</span><i>✦</i><span>Strapi</span><i>✦</i><span>Python</span><i>✦</i><span>Product thinking</span><i>✦</i><span>Accessible UI</span><i>✦</i>
+      </div>
+    </div>
+
     <section id="projects" class="section projects-section">
       <div class="container">
         <div class="section-heading section-heading-row reveal">
@@ -114,8 +123,19 @@
         </div>
 
         <div class="project-list">
+          <article class="project-card featured flagship reveal">
+            <div class="project-number">01 / Flagship product</div>
+            <div class="project-content">
+              <div class="project-meta"><span>React</span><span>Express</span><span>PostgreSQL</span><span>Real-time</span></div>
+              <h3>NestSyncFlow</h3>
+              <p>A full-stack product platform built around synchronized workflows: secure JWT authentication, Prisma-backed data, WebSocket live updates, an analytics dashboard, and a Stripe-ready monetization flow.</p>
+              <a href="mailto:alex.06dimitrov@gmail.com?subject=NestSyncFlow%20case%20study" aria-label="Ask about the private NestSyncFlow case study">Private case study — ask me about it <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="project-mark" aria-hidden="true">NS</div>
+          </article>
+
           <article class="project-card featured reveal">
-            <div class="project-number">01</div>
+            <div class="project-number">02</div>
             <div class="project-content">
               <div class="project-meta"><span>Python</span><span>Machine learning</span><span>Sensor data</span></div>
               <h3>Barbell Exercise Tracker</h3>
@@ -127,7 +147,7 @@
 
           <div class="project-pair">
             <article class="project-card reveal">
-              <div class="project-number">02</div>
+              <div class="project-number">03</div>
               <div class="project-content">
                 <div class="project-meta"><span>Python</span><span>OpenCV</span><span>NumPy</span></div>
                 <h3>Coin Detector</h3>
@@ -137,7 +157,7 @@
             </article>
 
             <article class="project-card reveal">
-              <div class="project-number">03</div>
+              <div class="project-number">04</div>
               <div class="project-content">
                 <div class="project-meta"><span>Python</span><span>CSV</span><span>Data cleaning</span></div>
                 <h3>Data365 Analysis</h3>
@@ -149,7 +169,7 @@
 
           <div class="project-pair">
             <article class="project-card reveal">
-              <div class="project-number">04</div>
+              <div class="project-number">05</div>
               <div class="project-content">
                 <div class="project-meta"><span>Python</span><span>Pygame</span><span>Game logic</span></div>
                 <h3>2048</h3>
@@ -159,7 +179,7 @@
             </article>
 
             <article class="project-card reveal">
-              <div class="project-number">05</div>
+              <div class="project-number">06</div>
               <div class="project-content">
                 <div class="project-meta"><span>Lua</span><span>LÖVE2D</span><span>Game architecture</span></div>
                 <h3>Legend of Lua</h3>

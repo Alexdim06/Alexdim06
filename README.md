@@ -31,6 +31,7 @@ Outside work, I learn by building Python projects around data, computer vision, 
 
 | Project | What I explored | Tools |
 | --- | --- | --- |
+| **NestSyncFlow** *(private case study)* | Real-time full-stack workflows, authentication, analytics, and a monetization-ready product architecture | React, Express, PostgreSQL, Prisma, WebSocket |
 | [Barbell Exercise Tracker](https://github.com/Alexdim06/Barbell-Exercise-Tracker) | Processing motion-sensor data, exercise recognition, and repetition counting | Python, Pandas, scikit-learn |
 | [Coin Detector](https://github.com/Alexdim06/Coin-detector) | Detecting and classifying coins from their size, shape, and color | Python, OpenCV, NumPy |
 | [Data365 Analysis](https://github.com/Alexdim06/Data365_analyze) | Cleaning and preparing user-journey data for analysis | Python, CSV, data cleaning |
