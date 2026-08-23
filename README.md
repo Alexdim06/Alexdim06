@@ -32,7 +32,7 @@ Before development, I spent seven months as a business analyst intern—experien
 | Project | What I explored | Tools |
 | --- | --- | --- |
 | [**NestSyncFlow**](https://alexdim06.github.io/Alexdim06/projects/nestsyncflow.html) *(private case study)* | Real-time full-stack workflows, authentication, analytics, and a monetization-ready product architecture | React, Express, PostgreSQL, Prisma, WebSocket |
-| **UVE / SystemaWeb** | A multi-repository web system: [UVE](https://github.com/Alexdim06/UVE) · [SystemaWeb](https://github.com/Alexdim06/SystemaWeb) | Private repositories |
+| [**UVE × SystemaWeb**](https://systemaweb.com/) | One product ecosystem: an advanced HTML5 video-control extension plus its product, content, and Pro licensing platform. [Chrome](https://chromewebstore.google.com/detail/ultimate-video-enhancer-u/iiikemfogmgcndndggdcbpilpbkpkkji) · [Firefox](https://addons.mozilla.org/en-US/firefox/addon/ultimate-video-enhancer-uve/) | Browser extension, web platform, Stripe |
 
 ### Toolbox
 
