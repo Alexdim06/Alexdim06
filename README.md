@@ -34,7 +34,8 @@ Outside work, I learn by building Python projects around data, computer vision, 
 | [Barbell Exercise Tracker](https://github.com/Alexdim06/Barbell-Exercise-Tracker) | Processing motion-sensor data, exercise recognition, and repetition counting | Python, Pandas, scikit-learn |
 | [Coin Detector](https://github.com/Alexdim06/Coin-detector) | Detecting and classifying coins from their size, shape, and color | Python, OpenCV, NumPy |
 | [Data365 Analysis](https://github.com/Alexdim06/Data365_analyze) | Cleaning and preparing user-journey data for analysis | Python, CSV, data cleaning |
-| [2048](https://github.com/Alexdim06/Game_2048) | Game logic, state management, and a desktop interface | Python |
+| [2048](https://github.com/Alexdim06/Game_2048) | Animated tile logic, keyboard controls, menus, and sound | Python, Pygame |
+| [Legend of Lua](https://github.com/Alexdim06/Lua_game) | A modular 2D adventure with maps, enemies, items, spells, and save state | Lua, LÖVE2D |
 
 ### Toolbox
 

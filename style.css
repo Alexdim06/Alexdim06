@@ -495,6 +495,10 @@ h2 {
   grid-template-columns: 1fr 1fr;
 }
 
+.project-pair + .project-pair {
+  margin-top: -1px;
+}
+
 .project-card {
   position: relative;
   display: grid;
