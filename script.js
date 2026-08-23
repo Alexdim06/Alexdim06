@@ -121,6 +121,19 @@ if (hasFinePointer && !prefersReducedMotion) {
     });
   }
 
+  document.querySelectorAll("[data-tilt-card]").forEach((card) => {
+    card.addEventListener("pointermove", (event) => {
+      const bounds = card.getBoundingClientRect();
+      const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+      const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+      card.style.transform = `rotateX(${y * -6}deg) rotateY(${x * 8}deg)`;
+    });
+
+    card.addEventListener("pointerleave", () => {
+      card.style.removeProperty("transform");
+    });
+  });
+
   document.querySelectorAll(".btn, .nav-cta, .contact-email").forEach((control) => {
     control.addEventListener("pointermove", (event) => {
       const bounds = control.getBoundingClientRect();

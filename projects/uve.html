@@ -3,58 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="UVE showcase — Ultimate Video Enhancer, the Chrome and Firefox extension for HTML5 speed, volume, subtitles, and presets. Official popup design from the UVE product.">
-  <meta name="theme-color" content="#0b0d12">
+  <meta name="description" content="UVE showcase — how Ultimate Video Enhancer works, with the official popup preview and links to SystemaWeb, Chrome, and Firefox.">
+  <meta name="theme-color" content="#0b0d0c">
   <meta property="og:title" content="UVE — Product Showcase">
-  <meta property="og:description" content="Professional video control for every website. The live UVE popup, taken from the product itself.">
+  <meta property="og:description" content="The official UVE popup, explained in the portfolio, with SystemaWeb as the live product home.">
   <meta property="og:type" content="website">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <title>UVE — Product Showcase</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Inter:wght@400;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="uve-preview.css">
 </head>
-<body class="uve-page">
+<body class="case-study-page">
   <a href="#main-content" class="skip-link">Skip to main content</a>
   <div id="scrollProgress" class="scroll-progress" aria-hidden="true"></div>
   <div id="cursorGlow" class="cursor-glow" aria-hidden="true"></div>
   <div class="grain" aria-hidden="true"></div>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
 
   <header class="site-header">
     <div class="container nav-wrap">
       <a href="../index.html" class="logo" aria-label="Back to Aleksandar Dimitrov portfolio">AD<span>.</span></a>
       <nav class="case-nav" aria-label="Case study navigation">
         <a href="../index.html#projects">← All work</a>
-        <a href="https://systemaweb.com/" target="_blank" rel="noreferrer" class="nav-cta">Visit systemaweb.com</a>
+        <a href="https://systemaweb.com/" target="_blank" rel="noreferrer" class="nav-cta">Open SystemaWeb</a>
       </nav>
     </div>
   </header>
 
   <main id="main-content">
-    <section class="uve-hero uve-snap-section" data-spotlight>
-      <div class="uve-orb uve-orb-one" aria-hidden="true"></div>
-      <div class="uve-orb uve-orb-two" aria-hidden="true"></div>
-      <div class="container uve-hero-grid">
-        <div class="uve-hero-copy reveal">
-          <p class="uve-eyebrow">Available on Chrome &amp; Firefox</p>
-          <h1>Professional video control for <span class="gradient-text">every website</span></h1>
-          <p class="uve-lead">Speed up lectures, boost quiet audio, find subtitles, and save presets — one extension for YouTube, Udemy, Coursera, and any HTML5 player.</p>
-          <div class="uve-hero-cta">
-            <a class="uve-btn uve-btn-primary" href="https://chromewebstore.google.com/detail/ultimate-video-enhancer-u/iiikemfogmgcndndggdcbpilpbkpkkji" target="_blank" rel="noreferrer">Install free for Chrome</a>
-            <a class="uve-btn uve-btn-ghost" href="https://addons.mozilla.org/en-US/firefox/addon/ultimate-video-enhancer-uve/" target="_blank" rel="noreferrer">Install free for Firefox</a>
-            <a class="uve-btn uve-btn-ghost" href="https://systemaweb.com/#pricing" target="_blank" rel="noreferrer">Get Pro — €24.99</a>
+    <section class="case-hero">
+      <div class="container">
+        <div class="case-intro reveal">
+          <p class="section-index">Live product showcase / 2025</p>
+          <h1>UVE <span>× SystemaWeb</span></h1>
+          <p class="case-lead">UVE is the browser extension people install. SystemaWeb is the official product site around it — content, pricing, and Pro licensing.</p>
+          <div class="case-tags">
+            <span>Browser extension</span><span>Chrome</span><span>Firefox</span><span>SystemaWeb</span><span>Stripe</span>
           </div>
-          <ul class="hero-stats">
-            <li>0.1x – 16x speed</li>
-            <li>Up to 600% volume</li>
-            <li>Per-site presets</li>
-          </ul>
         </div>
 
-        <div class="hero-card reveal">
-          <div class="mock-popup extension-preview" data-tilt-card data-extension-demo role="group" aria-label="Interactive Ultimate Video Enhancer preview">
+        <div class="uve-preview-stage reveal">
+          <div class="mock-popup extension-preview" data-tilt-card data-extension-demo role="group" aria-label="Official Ultimate Video Enhancer popup preview">
             <div class="extension-header">
               <span class="extension-brand extension-brand-live">
                 <img src="../assets/uve/icon48.png" alt="" width="30" height="30">
@@ -171,68 +164,53 @@
               <div class="extension-row"><span>Global sync</span><button class="extension-switch is-on" type="button" data-demo-switch aria-pressed="true" aria-label="Toggle global sync"><i></i></button></div>
             </div>
           </div>
+          <p class="concept-note">Official UVE popup · Try the live product on <a href="https://systemaweb.com/" target="_blank" rel="noreferrer">systemaweb.com</a></p>
         </div>
       </div>
     </section>
 
-    <section class="uve-section uve-snap-section" id="features">
-      <div class="container reveal">
-        <p class="uve-eyebrow">Everything in one extension</p>
-        <h2>The same product people install.</h2>
-        <p class="uve-lead">This is the official UVE popup — glass cards, blue chips, volume boost track, and the Controls / Templates / Subtitles tabs from the live extension.</p>
-        <div class="uve-feature-grid">
-          <article>
-            <h3>Playback speed</h3>
-            <p>Fine control from 0.1x to 16x with presets, sliders, and A/D/S keyboard shortcuts.</p>
-          </article>
-          <article>
-            <h3>Volume boost</h3>
-            <p>Web Audio amplification up to 600% — fix quiet laptop speakers without external tools.</p>
-          </article>
-          <article>
-            <h3>Subtitles</h3>
-            <p>YouTube captions, OpenSubtitles search, and manual .vtt/.srt upload for language learning.</p>
-          </article>
-          <article>
-            <h3>Templates</h3>
-            <p>Save up to 5 speed/volume combos — switch between "Lectures" and "Movies" in one click.</p>
-          </article>
-          <article>
-            <h3>Per-site memory</h3>
-            <p>YouTube at 1.5x, Udemy at 2x — each domain remembers your preference automatically.</p>
-          </article>
-          <article>
-            <h3>YouTube extras</h3>
-            <p>Restore dislike counts and use the in-page speed bubble on any video.</p>
-          </article>
+    <section class="section case-section">
+      <div class="container case-split">
+        <div class="section-heading reveal">
+          <p class="section-index">01 / What it does</p>
+          <h2>Control the player<br><em>the site left unfinished.</em></h2>
+        </div>
+        <div class="case-prose reveal">
+          <p class="lead">The preview on this page is the real UVE popup. The writing around it is this portfolio’s — the product itself lives on SystemaWeb.</p>
+          <p>UVE sits on compatible HTML5 video and gives people the missing controls: 0.1×–16× speed, volume boost up to 600%, captions, saved templates, and per-site memory. Chrome and Firefox share one Pro license. Guides, pricing, and checkout are on <a href="https://systemaweb.com/" target="_blank" rel="noreferrer">systemaweb.com</a>.</p>
         </div>
       </div>
     </section>
 
-    <section class="uve-section uve-section-alt uve-snap-section" id="system">
-      <div class="container reveal">
-        <p class="uve-eyebrow">Product system</p>
-        <h2>UVE is the extension. SystemaWeb is the product site.</h2>
-        <p class="uve-lead">The popup people use stays in the browser. SystemaWeb holds the official website, guides, pricing, and Stripe-powered Pro licensing.</p>
-        <div class="uve-system-flow">
-          <div><small>01</small><strong>HTML5 video</strong><span>YouTube, Udemy, any page</span></div>
-          <i>→</i>
-          <div><small>02</small><strong>UVE popup</strong><span>Speed, volume, captions</span></div>
-          <i>→</i>
-          <div><small>03</small><strong>Local memory</strong><span>Templates and per-site prefs</span></div>
-          <i>↗</i>
-          <div><small>04</small><strong>SystemaWeb</strong><span>Site, docs, Pro via Stripe</span></div>
+    <section class="section case-section case-dark">
+      <div class="container">
+        <div class="section-heading section-heading-row reveal">
+          <div>
+            <p class="section-index">02 / Inside the popup</p>
+            <h2>Three tabs.<br><em>One job.</em></h2>
+          </div>
+          <p class="case-side-note">Use the preview above — the tabs, presets, and volume track behave like the installed extension.</p>
+        </div>
+        <div class="capability-grid">
+          <article class="capability-card reveal"><span>01</span><h3>Controls</h3><p>Speed presets, fine steps, keyboard hints, and a volume track that goes from mute through player level into boost.</p></article>
+          <article class="capability-card reveal"><span>02</span><h3>Templates</h3><p>Save a Lectures or Movies combo and apply speed plus volume in one click, instead of resetting every video.</p></article>
+          <article class="capability-card reveal"><span>03</span><h3>Subtitles</h3><p>First it looks for captions already on the page. OpenSubtitles and file upload are the fallback.</p></article>
+          <article class="capability-card reveal"><span>04</span><h3>Per-site memory</h3><p>YouTube can stay at 1.5× while Udemy stays at 2×. Each domain keeps its own preference.</p></article>
+          <article class="capability-card reveal"><span>05</span><h3>Chrome + Firefox</h3><p>One product, two stores. Free covers everyday use. Pro unlocks the higher limits.</p></article>
+          <article class="capability-card reveal"><span>06</span><h3>SystemaWeb</h3><p>The official home for the product: website, docs, pricing, and Stripe-powered Pro licensing.</p></article>
         </div>
       </div>
     </section>
 
-    <section class="uve-section uve-snap-section uve-cta-section">
-      <div class="container reveal">
-        <p class="uve-eyebrow">Ready to enhance your videos?</p>
-        <h2>Install UVE on Chrome or Firefox — free to start.</h2>
-        <div class="uve-hero-cta">
-          <a class="uve-btn uve-btn-primary" href="https://chromewebstore.google.com/detail/ultimate-video-enhancer-u/iiikemfogmgcndndggdcbpilpbkpkkji" target="_blank" rel="noreferrer">Install free for Chrome</a>
-          <a class="uve-btn uve-btn-ghost" href="https://addons.mozilla.org/en-US/firefox/addon/ultimate-video-enhancer-uve/" target="_blank" rel="noreferrer">Firefox Add-ons</a>
+    <section class="section contact-section">
+      <div class="container contact-inner reveal">
+        <p class="section-index">See the live product</p>
+        <h2>Continue on<br><em>SystemaWeb.</em></h2>
+        <p>This page keeps the official popup. The full product, pricing, and install flow are on the live site.</p>
+        <div class="uve-cta-row">
+          <a class="contact-email" href="https://systemaweb.com/" target="_blank" rel="noreferrer">systemaweb.com <span aria-hidden="true">↗</span></a>
+          <a class="contact-email" href="https://chromewebstore.google.com/detail/ultimate-video-enhancer-u/iiikemfogmgcndndggdcbpilpbkpkkji" target="_blank" rel="noreferrer">Chrome Web Store <span aria-hidden="true">↗</span></a>
+          <a class="contact-email" href="https://addons.mozilla.org/en-US/firefox/addon/ultimate-video-enhancer-uve/" target="_blank" rel="noreferrer">Firefox Add-ons <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
