@@ -32,8 +32,7 @@ Before development, I spent seven months as a business analyst intern—experien
 | Project | What I explored | Tools |
 | --- | --- | --- |
 | [**NestSyncFlow**](https://alexdim06.github.io/Alexdim06/projects/nestsyncflow.html) *(private case study)* | Real-time full-stack workflows, authentication, analytics, and a monetization-ready product architecture | React, Express, PostgreSQL, Prisma, WebSocket |
-| **Enterprise CMS Platform** *(confidential client work)* | Reusable content models, Angular integration, localization, accessibility, and role-based publishing | Angular, Strapi, Bootstrap |
-| [Legend of Lua](https://github.com/Alexdim06/Lua_game) | A modular 2D adventure with maps, enemies, items, spells, and save state | Lua, LÖVE2D |
+| **UVE / SystemaWeb** | A multi-repository web system: [UVE](https://github.com/Alexdim06/UVE) · [SystemaWeb](https://github.com/Alexdim06/SystemaWeb) | Private repositories |
 
 ### Toolbox
 

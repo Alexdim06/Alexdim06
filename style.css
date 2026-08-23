@@ -1034,8 +1034,95 @@ h2 {
   color: rgba(82, 45, 33, 0.13);
 }
 
-.curated-projects .project-card {
-  min-height: 470px;
+.uve-project {
+  min-height: 440px;
+  grid-template-columns: auto minmax(0, 1fr) 0.65fr;
+  align-items: end;
+  background:
+    radial-gradient(circle at 84% 26%, rgba(200, 255, 71, 0.1), transparent 28%),
+    linear-gradient(145deg, #121713, #0c100d);
+}
+
+.uve-project .project-content {
+  max-width: 680px;
+}
+
+.uve-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.3rem;
+}
+
+.uve-orbit {
+  position: relative !important;
+  align-self: center;
+  justify-self: center;
+  width: 190px;
+  height: 190px;
+  border: 1px solid rgba(200, 255, 71, 0.22);
+  border-radius: 50%;
+  animation: orbitBreathe 4s ease-in-out infinite;
+}
+
+.uve-orbit::before,
+.uve-orbit::after {
+  position: absolute;
+  border: 1px solid rgba(200, 255, 71, 0.13);
+  border-radius: 50%;
+  content: "";
+}
+
+.uve-orbit::before {
+  inset: 24px;
+}
+
+.uve-orbit::after {
+  inset: 52px;
+}
+
+.uve-orbit span,
+.uve-orbit b {
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  width: 56px;
+  height: 56px;
+  place-items: center;
+  border-radius: 50%;
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+}
+
+.uve-orbit span {
+  top: 10px;
+  left: 4px;
+  background: var(--acid);
+  color: #10130c;
+}
+
+.uve-orbit b {
+  right: 3px;
+  bottom: 10px;
+  border: 1px solid var(--orange);
+  background: #17120f;
+  color: var(--orange);
+}
+
+.uve-orbit i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--acid);
+  box-shadow: 0 0 16px var(--acid);
+  transform: translate(-50%, -50%);
+}
+
+@keyframes orbitBreathe {
+  0%, 100% { transform: scale(1) rotate(0); }
+  50% { transform: scale(1.04) rotate(4deg); }
 }
 
 .timeline {
@@ -1438,6 +1525,14 @@ h2 {
     display: none;
   }
 
+  .uve-project {
+    grid-template-columns: auto 1fr;
+  }
+
+  .uve-orbit {
+    display: none;
+  }
+
   .capability-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1688,7 +1783,8 @@ h2 {
 
   .product-window,
   .product-window::after,
-  .chart-bars i {
+  .chart-bars i,
+  .uve-orbit {
     animation: none;
   }
 }
