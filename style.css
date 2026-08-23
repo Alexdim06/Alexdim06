@@ -345,7 +345,7 @@ h2 em {
 
 .word-cycle em {
   grid-area: 1 / 1;
-  animation: wordCycle 9s ease-in-out infinite backwards;
+  animation: wordCycle 18s ease-in-out infinite backwards;
 }
 
 .word-cycle em:first-child {
@@ -353,22 +353,23 @@ h2 em {
 }
 
 .word-cycle em:nth-child(2) {
-  animation-delay: 3s;
-}
-
-.word-cycle em:nth-child(3) {
   animation-delay: 6s;
 }
 
+.word-cycle em:nth-child(3) {
+  animation-delay: 12s;
+}
+
 @keyframes wordCycleFirst {
-  0%, 28% { opacity: 1; transform: none; }
-  34%, 100% { opacity: 0; transform: translateY(-12px); }
+  0%, 26% { opacity: 1; transform: none; }
+  40%, 88% { opacity: 0; transform: translate3d(0, -3px, 0); }
+  100% { opacity: 1; transform: none; }
 }
 
 @keyframes wordCycle {
-  0%, 6% { opacity: 0; transform: translateY(16px); }
-  10%, 28% { opacity: 1; transform: none; }
-  34%, 100% { opacity: 0; transform: translateY(-12px); }
+  0% { opacity: 0; transform: translate3d(0, 4px, 0); }
+  10%, 26% { opacity: 1; transform: none; }
+  40%, 100% { opacity: 0; transform: translate3d(0, -3px, 0); }
 }
 
 .hero-text {
