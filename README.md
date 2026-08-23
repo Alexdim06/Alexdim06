@@ -1,11 +1,11 @@
 <div align="center">
   <a href="https://alexdim06.github.io/Alexdim06/">
-    <img src="https://alexdim06.github.io/Alexdim06/assets/readme-header.svg" width="100%" alt="Aleksandar Dimitrov — Full-Stack Developer" />
+    <img src="https://cdn.jsdelivr.net/gh/Alexdim06/Alexdim06@65bac256b36c00173992ace30bd7329a32f11892/assets/readme-header.svg" width="100%" alt="Aleksandar Dimitrov — Full-Stack Developer" />
   </a>
 
   <br />
 
-  <img src="https://alexdim06.github.io/Alexdim06/assets/readme-fade.svg" width="100%" alt="Slowly fading introduction" />
+  <img src="https://cdn.jsdelivr.net/gh/Alexdim06/Alexdim06@65bac256b36c00173992ace30bd7329a32f11892/assets/readme-fade.svg" width="100%" alt="Slowly fading introduction" />
 
   <br />
 
@@ -19,7 +19,7 @@
   <img src="https://komarev.com/ghpvc/?username=Alexdim06&style=flat-square&color=C8FF47&label=PROFILE+VIEWS" alt="Profile views" />
 </div>
 
-<img src="https://alexdim06.github.io/Alexdim06/assets/readme-wave.svg" width="100%" alt="" />
+<img src="https://cdn.jsdelivr.net/gh/Alexdim06/Alexdim06@65bac256b36c00173992ace30bd7329a32f11892/assets/readme-wave.svg" width="100%" alt="" />
 
 ## `01 / About`
 
@@ -41,7 +41,7 @@ Before engineering, I worked as a business analyst intern. That experience still
 | User-focused workflows | DevOps and delivery | Mentoring developers |
 | From idea to release | Accessible, maintainable UI | Clear team communication |
 
-<img src="https://alexdim06.github.io/Alexdim06/assets/readme-wave.svg" width="100%" alt="" />
+<img src="https://cdn.jsdelivr.net/gh/Alexdim06/Alexdim06@65bac256b36c00173992ace30bd7329a32f11892/assets/readme-wave.svg" width="100%" alt="" />
 
 ## `02 / Flagship products`
 
@@ -68,7 +68,7 @@ Before engineering, I worked as a business analyst intern. That experience still
   <a href="https://addons.mozilla.org/en-US/firefox/addon/ultimate-video-enhancer-uve/"><img src="https://img.shields.io/badge/INSTALL_FOR_FIREFOX-FF785A?style=for-the-badge&logo=firefoxbrowser&logoColor=10130C" alt="Install UVE for Firefox" /></a>
 </div>
 
-<img src="https://alexdim06.github.io/Alexdim06/assets/readme-wave.svg" width="100%" alt="" />
+<img src="https://cdn.jsdelivr.net/gh/Alexdim06/Alexdim06@65bac256b36c00173992ace30bd7329a32f11892/assets/readme-wave.svg" width="100%" alt="" />
 
 ## `03 / Technology`
 
@@ -109,5 +109,5 @@ LEARNING       curiosity ─── experiment ─── improve ─── repeat
     <img src="https://img.shields.io/badge/BUILD_SOMETHING_TOGETHER-C8FF47?style=for-the-badge&logo=minutemailer&logoColor=10130C" alt="Contact Aleksandar" />
   </a>
   <br /><br />
-  <img src="https://alexdim06.github.io/Alexdim06/assets/readme-close.svg" width="520" alt="Sofia, Bulgaria. Open to meaningful products and strong teams." />
+  <img src="https://cdn.jsdelivr.net/gh/Alexdim06/Alexdim06@65bac256b36c00173992ace30bd7329a32f11892/assets/readme-close.svg" width="520" alt="Sofia, Bulgaria. Open to meaningful products and strong teams." />
 </div>
