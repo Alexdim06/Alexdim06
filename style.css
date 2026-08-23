@@ -747,6 +747,13 @@ h2 {
   gap: 2rem;
 }
 
+.heading-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.85rem 1.4rem;
+}
+
 .text-link,
 .project-card a {
   display: inline-flex;
@@ -1262,11 +1269,14 @@ h2 {
 }
 
 .uve-orbit {
+  --orbit-size: 228px;
+  --orbit-radius: 88px;
+  --icon-size: 44px;
   position: relative !important;
   align-self: center;
   justify-self: center;
-  width: 190px;
-  height: 190px;
+  width: var(--orbit-size);
+  height: var(--orbit-size);
   border: 1px solid rgba(200, 255, 71, 0.22);
   border-radius: 50%;
   animation: orbitBreathe 4s ease-in-out infinite;
@@ -1281,57 +1291,93 @@ h2 {
 }
 
 .uve-orbit::before {
-  inset: 24px;
+  inset: 28px;
 }
 
 .uve-orbit::after {
-  inset: 52px;
+  inset: 54px;
   border-style: dashed;
+}
+
+.uve-orbit-core {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--acid);
+  color: #10130c;
+  box-shadow: 0 0 22px rgba(200, 255, 71, 0.28);
+  transform: translate(-50%, -50%);
+}
+
+.uve-orbit-core svg {
+  width: 22px;
+  height: 22px;
+}
+
+.uve-orbit-ring {
+  position: absolute;
+  inset: 0;
   animation: ringSpin 28s linear infinite;
 }
 
-.uve-orbit span,
-.uve-orbit b {
+.uve-orbit-slot {
   position: absolute;
-  z-index: 2;
+  top: 50%;
+  left: 50%;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  margin: calc(var(--icon-size) / -2) 0 0 calc(var(--icon-size) / -2);
+  transform: rotate(calc(var(--i) * 90deg)) translateX(var(--orbit-radius));
+}
+
+.uve-orbit-hold {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: rotate(calc(var(--i) * -90deg));
+}
+
+.uve-orbit-face {
   display: grid;
-  width: 56px;
-  height: 56px;
+  width: 100%;
+  height: 100%;
   place-items: center;
+  border: 1px solid rgba(200, 255, 71, 0.28);
   border-radius: 50%;
-  font-family: var(--font-display);
-  font-size: 0.82rem;
-  transform-origin: center;
-  will-change: transform;
+  background: rgba(11, 13, 12, 0.92);
+  color: var(--acid);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.28);
+  animation: orbitCounter 28s linear infinite;
 }
 
-.uve-orbit span {
-  top: 50%;
-  left: 50%;
-  background: var(--acid);
-  color: #10130c;
-  animation: orbitUve 18s linear infinite;
+.uve-orbit-face svg {
+  width: 18px;
+  height: 18px;
 }
 
-.uve-orbit b {
-  top: 50%;
-  left: 50%;
-  border: 1px solid var(--orange);
-  background: #17120f;
+.uve-face-chrome {
+  color: #8fd3ff;
+  border-color: rgba(143, 211, 255, 0.35);
+}
+
+.uve-face-web {
+  color: var(--acid);
+}
+
+.uve-face-firefox {
   color: var(--orange);
-  animation: orbitSystema 24s linear infinite;
+  border-color: rgba(255, 120, 90, 0.4);
 }
 
-.uve-orbit i {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--acid);
-  box-shadow: 0 0 16px var(--acid);
-  transform: translate(-50%, -50%);
+.uve-face-pro {
+  color: #f5c451;
+  border-color: rgba(245, 196, 81, 0.38);
 }
 
 @keyframes orbitBreathe {
@@ -1339,18 +1385,12 @@ h2 {
   50% { box-shadow: 0 0 38px rgba(200, 255, 71, 0.1); }
 }
 
-@keyframes orbitUve {
-  from { transform: translate(-50%, -50%) rotate(0deg) translateX(76px) rotate(0deg); }
-  to { transform: translate(-50%, -50%) rotate(360deg) translateX(76px) rotate(-360deg); }
-}
-
-@keyframes orbitSystema {
-  from { transform: translate(-50%, -50%) rotate(180deg) translateX(52px) rotate(-180deg); }
-  to { transform: translate(-50%, -50%) rotate(540deg) translateX(52px) rotate(-540deg); }
-}
-
 @keyframes ringSpin {
   to { transform: rotate(360deg); }
+}
+
+@keyframes orbitCounter {
+  to { transform: rotate(-360deg); }
 }
 
 .timeline {
@@ -1612,9 +1652,223 @@ h2 {
   text-transform: uppercase;
 }
 
-.case-dashboard {
+.case-dashboard,
+.uve-showcase {
   width: min(860px, 94%);
   margin: 5rem 0 0 auto;
+}
+
+.uve-player {
+  overflow: hidden;
+  border: 1px solid rgba(243, 241, 233, 0.12);
+  border-radius: 16px;
+  background: #0d110f;
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.32);
+}
+
+.uve-player-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 230px;
+  min-height: 360px;
+}
+
+.uve-player-video {
+  position: relative;
+  display: flex;
+  min-height: 360px;
+  padding: 1.2rem;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(200, 255, 71, 0.12), transparent 26%),
+    linear-gradient(160deg, #151a16, #0a0c0a 58%, #1a120f);
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.uve-player-site,
+.uve-player-speed,
+.uve-player-caption,
+.uve-player-bar {
+  position: relative;
+  z-index: 1;
+}
+
+.uve-player-site {
+  position: absolute;
+  top: 1.1rem;
+  left: 1.1rem;
+  color: #c8ff47;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.uve-player-speed {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  color: rgba(243, 241, 233, 0.92);
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 6vw, 4.4rem);
+  letter-spacing: -0.06em;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+}
+
+.uve-player-caption {
+  margin-bottom: 0.85rem;
+  color: #d7d4cc;
+  font-size: 0.92rem;
+}
+
+.uve-player-progress {
+  height: 4px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.uve-player-progress i {
+  display: block;
+  width: 38%;
+  height: 100%;
+  background: var(--acid);
+  animation: uveProgress 7s ease-in-out infinite;
+}
+
+.uve-player-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.55rem;
+  color: #8b918b;
+  font-size: 0.62rem;
+}
+
+.uve-popup {
+  display: flex;
+  padding: 1rem 0.95rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.07);
+  background: #101412;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.uve-popup-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.uve-popup-head b {
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+}
+
+.uve-popup-head em {
+  padding: 0.18rem 0.4rem;
+  border-radius: 99px;
+  background: var(--acid);
+  color: #10130c;
+  font-size: 0.58rem;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.uve-popup-status {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #8d948d;
+  font-size: 0.62rem;
+}
+
+.uve-popup-status i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--acid);
+  box-shadow: 0 0 10px var(--acid);
+  animation: livePulse 1.4s ease-in-out infinite;
+}
+
+.uve-popup-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.uve-popup-control small {
+  color: #7d847d;
+  font-size: 0.58rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.uve-popup-control strong {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+}
+
+.uve-popup-track {
+  height: 4px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: #2a302b;
+}
+
+.uve-popup-track i {
+  display: block;
+  width: 46%;
+  height: 100%;
+  background: var(--acid);
+}
+
+.uve-popup-track-orange i {
+  width: 38%;
+  background: var(--orange);
+}
+
+.uve-popup-presets {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.uve-popup-presets span {
+  padding: 0.18rem 0.35rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #8b918b;
+  font-size: 0.58rem;
+}
+
+.uve-popup-presets .is-on {
+  border-color: var(--acid);
+  background: rgba(200, 255, 71, 0.12);
+  color: var(--acid);
+}
+
+.uve-popup-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: auto;
+}
+
+.uve-popup-meta span {
+  padding: 0.22rem 0.4rem;
+  border: 1px solid rgba(200, 255, 71, 0.18);
+  color: #c8d7a8;
+  font-size: 0.58rem;
+}
+
+.uve-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 2rem;
+}
+
+@keyframes uveProgress {
+  0%, 100% { width: 28%; }
+  50% { width: 62%; }
 }
 
 .case-dashboard .product-window {
@@ -1814,11 +2068,23 @@ h2 {
   }
 
   .uve-project {
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr;
   }
 
   .uve-orbit {
-    display: none;
+    --orbit-size: 188px;
+    --orbit-radius: 72px;
+    --icon-size: 40px;
+    margin: 0.4rem auto 0;
+  }
+
+  .uve-player-stage {
+    grid-template-columns: 1fr;
+  }
+
+  .uve-popup {
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    border-left: 0;
   }
 
   .capability-grid {
@@ -2059,6 +2325,16 @@ h2 {
   .contact-email {
     font-size: 0.94rem;
   }
+
+  .uve-orbit {
+    --orbit-size: 168px;
+    --orbit-radius: 64px;
+    --icon-size: 36px;
+  }
+
+  .uve-player-speed {
+    font-size: 2.4rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -2093,9 +2369,10 @@ h2 {
   .product-window::after,
   .chart-bars i,
   .uve-orbit,
-  .uve-orbit::after,
-  .uve-orbit span,
-  .uve-orbit b {
+  .uve-orbit-ring,
+  .uve-orbit-face,
+  .uve-player-progress i,
+  .uve-popup-status i {
     animation: none;
   }
 

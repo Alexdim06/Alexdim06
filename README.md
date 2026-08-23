@@ -57,7 +57,7 @@ Before engineering, I worked as a business analyst intern. That experience still
       <h3>🎬 UVE × SystemaWeb</h3>
       <p>One connected product ecosystem: an advanced HTML5 video-control extension plus its official web, content, pricing, and Stripe-powered Pro licensing platform.</p>
       <p><code>Browser Extension</code> <code>Web Platform</code> <code>Stripe</code></p>
-      <a href="https://systemaweb.com/"><strong>Visit the live product →</strong></a>
+      <a href="https://alexdim06.github.io/Alexdim06/projects/uve.html"><strong>Explore the UVE showcase →</strong></a>
     </td>
   </tr>
 </table>
