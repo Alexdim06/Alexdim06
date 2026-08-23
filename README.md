@@ -5,7 +5,7 @@
 
   <br />
 
-  <img src="https://cdn.jsdelivr.net/gh/Alexdim06/Alexdim06@dfb64ebbc7313b5bfec09e518d961d6ec79013a9/assets/readme-fade.svg" width="100%" alt="Slowly fading introduction" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1200&color=C8FF47&center=true&vCenter=true&width=900&height=45&duration=3200&lines=Building+full-stack+products;Angular+%2B+Strapi+at+production+scale;NestSyncFlow+%E2%80%A2+UVE+%C3%97+SystemaWeb;DevOps+delivery+%E2%80%A2+Frontend+mentoring" alt="Building full-stack products" />
 
   <br />
 
@@ -109,5 +109,6 @@ LEARNING       curiosity ─── experiment ─── improve ─── repeat
     <img src="https://img.shields.io/badge/BUILD_SOMETHING_TOGETHER-C8FF47?style=for-the-badge&logo=minutemailer&logoColor=10130C" alt="Contact Aleksandar" />
   </a>
   <br /><br />
-  <img src="https://cdn.jsdelivr.net/gh/Alexdim06/Alexdim06@dfb64ebbc7313b5bfec09e518d961d6ec79013a9/assets/readme-close.svg" width="520" alt="Sofia, Bulgaria. Open to meaningful products and strong teams." />
+  <img src="https://img.shields.io/badge/Sofia%2C%20Bulgaria-111513?style=for-the-badge&logo=googlemaps&logoColor=C8FF47" alt="Sofia, Bulgaria" />
+  <img src="https://img.shields.io/badge/Open%20to%20opportunities-C8FF47?style=for-the-badge&logo=handshake&logoColor=10130C" alt="Open to opportunities" />
 </div>
