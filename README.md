@@ -5,7 +5,7 @@
 
   <br />
 
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=21&duration=2600&pause=750&color=C8FF47&center=true&vCenter=true&width=820&lines=Building+full-stack+products;Angular+%2B+Strapi+at+production+scale;NestSyncFlow+%E2%80%A2+UVE+%C3%97+SystemaWeb;DevOps+delivery+%E2%80%A2+Frontend+mentoring" alt="Animated introduction" />
+  <img src="./assets/readme-fade.svg" width="100%" alt="Slowly fading introduction" />
 
   <br />
 
@@ -109,5 +109,5 @@ LEARNING       curiosity ─── experiment ─── improve ─── repeat
     <img src="https://img.shields.io/badge/BUILD_SOMETHING_TOGETHER-C8FF47?style=for-the-badge&logo=minutemailer&logoColor=10130C" alt="Contact Aleksandar" />
   </a>
   <br /><br />
-  <sub>Sofia, Bulgaria · Open to meaningful products and strong teams</sub>
+  <img src="./assets/readme-close.svg" width="520" alt="Sofia, Bulgaria. Open to meaningful products and strong teams." />
 </div>

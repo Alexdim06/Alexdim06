@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="36" viewBox="0 0 520 36" role="img" aria-label="Sofia, Bulgaria. Open to meaningful products and strong teams.">
+  <text x="260" y="24" text-anchor="middle" fill="#a5a69f" font-family="Arial, sans-serif" font-size="14">
+    Sofia, Bulgaria · Open to meaningful products and strong teams
+    <animate attributeName="opacity" values=".4;1;.4" dur="6s" repeatCount="indefinite"/>
+  </text>
+</svg>
