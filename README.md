@@ -1,61 +1,61 @@
-# Aleksandar Dimitrov
+<div align="center">
+  <img src="./assets/profile.png" alt="Aleksandar Dimitrov" width="150" />
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Alexdim06&color=blueviolet" alt="Profile views" />
-  <br /><br />
-  <a href="https://github.com/Alexdim06" style="text-decoration: none;">
-    <img height="20" src="https://img.shields.io/github/followers/Alexdim06?label=Github%20Followers&color=purple&logo=github&style=flat" />
-  </a>
-  <a href="https://www.linkedin.com/in/aleksandar-dimitrov-pya16/" style="text-decoration: none;">
-    <img height="20" src="https://img.shields.io/badge/LinkedIn-Profile-0A66C2?logo=linkedin&logoColor=white&style=flat" />
-  </a>
-</p>
+  # Hi, I'm Aleksandar
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=D371EF&center=true&vCenter=true&width=500&lines=A+Software+Developer;A+Full-Stack+Developer;An+Automation+%26+AI+Enthusiast" alt="Typing SVG" />
-</p>
+  **Software developer turning data and ideas into useful projects.**
 
-<p align="center">
-  <a href="https://github.com/Alexdim06">
-    <img alt="followers" title="Follow me on Github" src="https://custom-icon-badges.demolab.com/github/followers/Alexdim06?color=8B0000&labelColor=000000&style=for-the-badge&logo=person-add&label=Followers&logoColor=white"/>
-  </a>
-  <a href="https://github.com/Alexdim06?tab=repositories&sort=stargazers">
-    <img alt="total stars" title="Total stars on GitHub" src="https://custom-icon-badges.demolab.com/github/stars/Alexdim06?color=800080&style=for-the-badge&labelColor=000000&logo=star"/>
-  </a>
-</p>
+  Sofia, Bulgaria · Open to junior roles, internships, and collaboration
 
-<p align="center">
-  <a href="mailto:alex.06dimitrov@gmail.com">Open for Collaboration and Freelance Projects</a>
-</p>
+  [Portfolio](https://alexdim06.github.io/Alexdim06/) ·
+  [LinkedIn](https://www.linkedin.com/in/aleksandar-dimitrov-pya16/) ·
+  [Email](mailto:alex.06dimitrov@gmail.com)
+</div>
 
-<p align="center">
-  <img src="./assets/profile.png" alt="Aleksandar Dimitrov" width="180" />
-</p>
+---
 
-## 🔥 **`About Me`**
-Hi, welcome to my profile. I am Aleksandar Dimitrov - a passionate full-stack developer building practical products with modern web technologies.
+### About me
 
-I work with Angular, Strapi, Django, CMS platforms, and Odoo ERP. I enjoy solving real problems, working in teams, and continuously improving both product quality and developer workflow.
+I’m a curious, hands-on developer with a growing focus on **Python, data, and machine learning**. I learn by building and enjoy following a problem from raw input to a solution that people can understand and use.
 
-## 🧭 **`Current Focus`**
-- Building and improving full-stack apps with React/Angular + Node.js backends.
-- Developing practical product workflows inspired by my NestSyncFlow experience.
-- Improving code quality, performance, and UX consistency across projects.
+My background in technical and customer-facing work has also taught me to diagnose problems calmly, communicate clearly, and take ownership of the result.
 
-## 🧰 **`Tech Stack`**
-### **`Languages and Tools`**
-| Python | JavaScript | TypeScript | Angular | React | Node.js | Express | Django | Strapi | PostgreSQL | Prisma | WebSocket |
-|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|
-| <img src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg" title="Python" alt="Python" width="55" height="55"/> | <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" title="JavaScript" alt="JavaScript" width="55" height="55"/> | <img src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg" title="TypeScript" alt="TypeScript" width="55" height="55"/> | <img src="https://github.com/devicons/devicon/blob/master/icons/angularjs/angularjs-original.svg" title="Angular" alt="Angular" width="55" height="55"/> | <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original.svg" title="React" alt="React" width="55" height="55"/> | <img src="https://github.com/devicons/devicon/blob/master/icons/nodejs/nodejs-original.svg" title="Node.js" alt="Node.js" width="55" height="55"/> | <img src="https://github.com/devicons/devicon/blob/master/icons/express/express-original.svg" title="Express" alt="Express" width="55" height="55"/> | <img src="https://github.com/devicons/devicon/blob/master/icons/django/django-plain-wordmark.svg" title="Django" alt="Django" width="55" height="55"/> | <img src="https://cdn.simpleicons.org/strapi/4945FF" title="Strapi" alt="Strapi" width="55" height="55"/> | <img src="https://github.com/devicons/devicon/blob/master/icons/postgresql/postgresql-original.svg" title="PostgreSQL" alt="PostgreSQL" width="55" height="55"/> | <img src="https://github.com/devicons/devicon/blob/master/icons/prisma/prisma-original.svg" title="Prisma" alt="Prisma" width="55" height="55"/> | <img src="https://cdn.simpleicons.org/socketdotio/ffffff" title="WebSocket" alt="WebSocket" width="55" height="55"/> |
+### Selected work
 
-#
+| Project | What I explored | Tools |
+| --- | --- | --- |
+| [Barbell Exercise Tracker](https://github.com/Alexdim06/Barbell-Exercise-Tracker) | Processing motion-sensor data, exercise recognition, and repetition counting | Python, Pandas, scikit-learn |
+| [Coin Detector](https://github.com/Alexdim06/Coin-detector) | Detecting and classifying coins from their size, shape, and color | Python, OpenCV, NumPy |
+| [Data365 Analysis](https://github.com/Alexdim06/Data365_analyze) | Cleaning and preparing user-journey data for analysis | Python, CSV, data cleaning |
+| [2048](https://github.com/Alexdim06/Game_2048) | Game logic, state management, and a desktop interface | Python |
 
-### **`Environments, Testing, Other`**
-| Git | Docker | VS Code | Cursor | JWT | Stripe | SQL | Odoo ERP |
-|----------|----------|----------|----------|----------|----------|----------|----------|
-| <img src="https://github.com/devicons/devicon/blob/master/icons/git/git-original-wordmark.svg" title="Git" alt="Git" width="55" height="55"/> | <img src="https://github.com/devicons/devicon/blob/master/icons/docker/docker-original-wordmark.svg" title="Docker" alt="Docker" width="55" height="55"/> | <img src="https://github.com/devicons/devicon/blob/master/icons/vscode/vscode-original.svg" title="VS Code" alt="VS Code" width="55" height="55"/> | <img src="https://cdn.simpleicons.org/cursor/000000" title="Cursor" alt="Cursor" width="55" height="55"/> | <img src="https://cdn.simpleicons.org/jsonwebtokens/ffffff" title="JWT" alt="JWT" width="55" height="55"/> | <img src="https://cdn.simpleicons.org/stripe/635BFF" title="Stripe" alt="Stripe" width="55" height="55"/> | <img src="https://github.com/devicons/devicon/blob/master/icons/mysql/mysql-original-wordmark.svg" title="SQL" alt="SQL" width="70" height="55"/> | <img src="https://cdn.simpleicons.org/odoo/714B67" title="Odoo" alt="Odoo ERP" width="55" height="55"/> |
+### Toolbox
 
-## 📫 **`Contact`**
-- Email: `alex.06dimitrov@gmail.com`
-- LinkedIn: [aleksandar-dimitrov-pya16](https://www.linkedin.com/in/aleksandar-dimitrov-pya16/)
-- GitHub: [Alexdim06](https://github.com/Alexdim06)
+**Use regularly**
+
+![Python](https://img.shields.io/badge/Python-111513?style=flat-square&logo=python&logoColor=C8FF47)
+![SQL](https://img.shields.io/badge/SQL-111513?style=flat-square&logo=postgresql&logoColor=C8FF47)
+![Git](https://img.shields.io/badge/Git-111513?style=flat-square&logo=git&logoColor=C8FF47)
+![Pandas](https://img.shields.io/badge/Pandas-111513?style=flat-square&logo=pandas&logoColor=C8FF47)
+![NumPy](https://img.shields.io/badge/NumPy-111513?style=flat-square&logo=numpy&logoColor=C8FF47)
+![OpenCV](https://img.shields.io/badge/OpenCV-111513?style=flat-square&logo=opencv&logoColor=C8FF47)
+
+**Currently expanding**
+
+![C#](https://img.shields.io/badge/C%23-111513?style=flat-square&logo=dotnet&logoColor=C8FF47)
+![JavaScript](https://img.shields.io/badge/JavaScript-111513?style=flat-square&logo=javascript&logoColor=C8FF47)
+![HTML5](https://img.shields.io/badge/HTML5-111513?style=flat-square&logo=html5&logoColor=C8FF47)
+![CSS3](https://img.shields.io/badge/CSS3-111513?style=flat-square&logo=css3&logoColor=C8FF47)
+![Lua](https://img.shields.io/badge/Lua-111513?style=flat-square&logo=lua&logoColor=C8FF47)
+
+### Current direction
+
+- Deepening my Python and data-analysis fundamentals
+- Building projects with clear documentation and reproducible workflows
+- Growing into backend and applied machine-learning work
+
+---
+
+<div align="center">
+  <a href="mailto:alex.06dimitrov@gmail.com"><strong>Have an opportunity or an idea? Let's talk.</strong></a>
+</div>
