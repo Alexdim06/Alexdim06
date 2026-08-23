@@ -3,9 +3,9 @@
 
   # Hi, I'm Aleksandar
 
-  **Frontend developer with a product mindset and a curiosity for data.**
+  **Full-stack developer connecting product, delivery, and people.**
 
-  Junior Frontend Developer at Industria Technology · Sofia, Bulgaria
+  Full-Stack Developer at Industria Technology · Sofia, Bulgaria
 
   [Portfolio](https://alexdim06.github.io/Alexdim06/) ·
   [LinkedIn](https://www.linkedin.com/in/aleksandar-dimitrov-pya16/) ·
@@ -16,14 +16,14 @@
 
 ### About me
 
-I build accessible, CMS-driven interfaces with **Angular, Bootstrap, and Strapi**. Before moving into development, I spent seven months as a business analyst intern—experience that helps me connect technical decisions with user and product needs.
+I work at an advanced level with **Angular and Strapi**, building across frontend interfaces, content architecture, and full-stack product delivery. My responsibilities also include DevOps workflows and coordinating and mentoring frontend developers.
 
-Outside work, I learn by building Python projects around data, computer vision, and machine learning. My earlier technical and customer-facing roles also taught me to diagnose problems calmly, communicate clearly, and take ownership of the result.
+Before development, I spent seven months as a business analyst intern—experience that helps me connect technical decisions with user and product needs. I care about accessible interfaces, maintainable systems, reliable delivery, and helping a team move together.
 
 ### Experience
 
-- **Junior Frontend Developer · Industria Technology** — October 2025–present
-  Building Angular UI components, integrating reusable Strapi content, and improving accessibility and performance.
+- **Full-Stack Developer · Industria Technology** — October 2025–present
+  Delivering advanced Angular and Strapi solutions, contributing to DevOps workflows, and coordinating and mentoring frontend developers.
 - **Business Analyst Intern** — 7 months
   Prepared user stories, analyzed processes, and supported sprint planning.
 
@@ -31,40 +31,33 @@ Outside work, I learn by building Python projects around data, computer vision, 
 
 | Project | What I explored | Tools |
 | --- | --- | --- |
-| **NestSyncFlow** *(private case study)* | Real-time full-stack workflows, authentication, analytics, and a monetization-ready product architecture | React, Express, PostgreSQL, Prisma, WebSocket |
-| [Barbell Exercise Tracker](https://github.com/Alexdim06/Barbell-Exercise-Tracker) | Processing motion-sensor data, exercise recognition, and repetition counting | Python, Pandas, scikit-learn |
-| [Coin Detector](https://github.com/Alexdim06/Coin-detector) | Detecting and classifying coins from their size, shape, and color | Python, OpenCV, NumPy |
-| [Data365 Analysis](https://github.com/Alexdim06/Data365_analyze) | Cleaning and preparing user-journey data for analysis | Python, CSV, data cleaning |
-| [2048](https://github.com/Alexdim06/Game_2048) | Animated tile logic, keyboard controls, menus, and sound | Python, Pygame |
+| [**NestSyncFlow**](https://alexdim06.github.io/Alexdim06/projects/nestsyncflow.html) *(private case study)* | Real-time full-stack workflows, authentication, analytics, and a monetization-ready product architecture | React, Express, PostgreSQL, Prisma, WebSocket |
+| **Enterprise CMS Platform** *(confidential client work)* | Reusable content models, Angular integration, localization, accessibility, and role-based publishing | Angular, Strapi, Bootstrap |
 | [Legend of Lua](https://github.com/Alexdim06/Lua_game) | A modular 2D adventure with maps, enemies, items, spells, and save state | Lua, LÖVE2D |
 
 ### Toolbox
 
 **Use regularly**
 
-![Python](https://img.shields.io/badge/Python-111513?style=flat-square&logo=python&logoColor=C8FF47)
 ![Angular](https://img.shields.io/badge/Angular-111513?style=flat-square&logo=angular&logoColor=C8FF47)
+![TypeScript](https://img.shields.io/badge/TypeScript-111513?style=flat-square&logo=typescript&logoColor=C8FF47)
 ![JavaScript](https://img.shields.io/badge/JavaScript-111513?style=flat-square&logo=javascript&logoColor=C8FF47)
+![React](https://img.shields.io/badge/React-111513?style=flat-square&logo=react&logoColor=C8FF47)
 ![HTML5](https://img.shields.io/badge/HTML5-111513?style=flat-square&logo=html5&logoColor=C8FF47)
 ![CSS3](https://img.shields.io/badge/CSS3-111513?style=flat-square&logo=css3&logoColor=C8FF47)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-111513?style=flat-square&logo=bootstrap&logoColor=C8FF47)
 ![Strapi](https://img.shields.io/badge/Strapi-111513?style=flat-square&logo=strapi&logoColor=C8FF47)
-![SQL](https://img.shields.io/badge/SQL-111513?style=flat-square&logo=postgresql&logoColor=C8FF47)
+![Node.js](https://img.shields.io/badge/Node.js-111513?style=flat-square&logo=nodedotjs&logoColor=C8FF47)
+![Express](https://img.shields.io/badge/Express-111513?style=flat-square&logo=express&logoColor=C8FF47)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-111513?style=flat-square&logo=postgresql&logoColor=C8FF47)
+![Docker](https://img.shields.io/badge/Docker-111513?style=flat-square&logo=docker&logoColor=C8FF47)
 ![Git](https://img.shields.io/badge/Git-111513?style=flat-square&logo=git&logoColor=C8FF47)
-![Pandas](https://img.shields.io/badge/Pandas-111513?style=flat-square&logo=pandas&logoColor=C8FF47)
-![NumPy](https://img.shields.io/badge/NumPy-111513?style=flat-square&logo=numpy&logoColor=C8FF47)
-![OpenCV](https://img.shields.io/badge/OpenCV-111513?style=flat-square&logo=opencv&logoColor=C8FF47)
-
-**Currently expanding**
-
-![C#](https://img.shields.io/badge/C%23-111513?style=flat-square&logo=dotnet&logoColor=C8FF47)
-![Lua](https://img.shields.io/badge/Lua-111513?style=flat-square&logo=lua&logoColor=C8FF47)
 
 ### Current direction
 
-- Building accessible, maintainable frontend experiences
-- Deepening my Python and data-analysis fundamentals
-- Growing toward full-stack and applied machine-learning work
+- Shipping maintainable full-stack products with Angular and Strapi
+- Strengthening DevOps delivery and operational reliability
+- Growing frontend developers through coordination and mentoring
 
 ---
 
