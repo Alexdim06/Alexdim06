@@ -23,6 +23,27 @@ html {
   scroll-padding-top: 5rem;
 }
 
+@media (prefers-reduced-motion: no-preference) and (min-width: 721px) {
+  html {
+    scroll-snap-type: y proximity;
+  }
+
+  html:has(.uve-page) {
+    scroll-snap-type: y mandatory;
+  }
+
+  main > section,
+  .marquee,
+  .site-footer {
+    scroll-snap-align: start;
+  }
+
+  .uve-snap-section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+}
+
 body {
   min-width: 320px;
   overflow-x: hidden;
@@ -2378,5 +2399,10 @@ h2 {
 
   .word-cycle em:not(:first-child) {
     display: none;
+  }
+
+  html,
+  html:has(.uve-page) {
+    scroll-snap-type: none;
   }
 }
