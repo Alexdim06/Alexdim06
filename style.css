@@ -442,30 +442,37 @@ h2 em {
   border-bottom: 1px solid var(--line);
   background: var(--acid);
   color: #10130c;
+  mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
 }
 
 .marquee-track {
   display: flex;
   width: max-content;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 0.9rem 0;
-  animation: marqueeScroll 28s linear infinite;
+  animation: marqueeScroll 24s linear infinite;
   font-family: var(--font-display);
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  will-change: transform;
 }
 
-.marquee-track i {
+.marquee-group {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.9rem 1.5rem 0.9rem 0;
+}
+
+.marquee-group i {
   color: #687d31;
   font-style: normal;
 }
 
 @keyframes marqueeScroll {
   to {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
@@ -1078,6 +1085,8 @@ h2 {
 
 .uve-orbit::after {
   inset: 52px;
+  border-style: dashed;
+  animation: ringSpin 28s linear infinite;
 }
 
 .uve-orbit span,
@@ -1091,21 +1100,25 @@ h2 {
   border-radius: 50%;
   font-family: var(--font-display);
   font-size: 0.82rem;
+  transform-origin: center;
+  will-change: transform;
 }
 
 .uve-orbit span {
-  top: 10px;
-  left: 4px;
+  top: 50%;
+  left: 50%;
   background: var(--acid);
   color: #10130c;
+  animation: orbitUve 18s linear infinite;
 }
 
 .uve-orbit b {
-  right: 3px;
-  bottom: 10px;
+  top: 50%;
+  left: 50%;
   border: 1px solid var(--orange);
   background: #17120f;
   color: var(--orange);
+  animation: orbitSystema 24s linear infinite;
 }
 
 .uve-orbit i {
@@ -1121,8 +1134,22 @@ h2 {
 }
 
 @keyframes orbitBreathe {
-  0%, 100% { transform: scale(1) rotate(0); }
-  50% { transform: scale(1.04) rotate(4deg); }
+  0%, 100% { box-shadow: 0 0 0 rgba(200, 255, 71, 0); }
+  50% { box-shadow: 0 0 38px rgba(200, 255, 71, 0.1); }
+}
+
+@keyframes orbitUve {
+  from { transform: translate(-50%, -50%) rotate(0deg) translateX(76px) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg) translateX(76px) rotate(-360deg); }
+}
+
+@keyframes orbitSystema {
+  from { transform: translate(-50%, -50%) rotate(180deg) translateX(52px) rotate(-180deg); }
+  to { transform: translate(-50%, -50%) rotate(540deg) translateX(52px) rotate(-540deg); }
+}
+
+@keyframes ringSpin {
+  to { transform: rotate(360deg); }
 }
 
 .timeline {
@@ -1784,7 +1811,10 @@ h2 {
   .product-window,
   .product-window::after,
   .chart-bars i,
-  .uve-orbit {
+  .uve-orbit,
+  .uve-orbit::after,
+  .uve-orbit span,
+  .uve-orbit b {
     animation: none;
   }
 }
