@@ -4,16 +4,14 @@
 }
 
 .uve-preview-stage {
-  width: min(420px, 100%);
-  margin: 4.5rem auto 0;
+  width: min(400px, 100%);
+  margin: 0;
+  justify-self: end;
 }
 
 .uve-preview-stage .concept-note {
-  text-align: center;
-}
-
-.uve-preview-stage .concept-note a {
-  color: var(--acid);
+  margin-top: 0.85rem;
+  text-align: left;
 }
 
 /* Interactive extension preview — mirrors live UVE popup (glass, status, volume). */
