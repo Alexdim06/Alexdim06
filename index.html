@@ -22,6 +22,7 @@
   <a href="#main-content" class="skip-link">Skip to main content</a>
   <div id="scrollProgress" class="scroll-progress" aria-hidden="true"></div>
   <div id="cursorGlow" class="cursor-glow" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
   <div class="ambient ambient-one" aria-hidden="true"></div>
   <div class="ambient ambient-two" aria-hidden="true"></div>
 
@@ -46,7 +47,7 @@
         <div class="hero-copy reveal">
           <div class="availability"><span aria-hidden="true"></span> Open to new opportunities</div>
           <p class="eyebrow">Full-stack developer · Sofia, Bulgaria</p>
-          <h1>I turn curiosity into <em>working software.</em></h1>
+          <h1>I turn curiosity into <span class="word-cycle"><em>working software.</em><em aria-hidden="true">useful products.</em><em aria-hidden="true">reliable systems.</em></span></h1>
           <p class="hero-text">
             I’m Aleksandar, a full-stack developer at Industria Technology specializing in Angular and Strapi.
             I also contribute to DevOps delivery and coordinate frontend developers across the work we ship.
@@ -56,14 +57,21 @@
             <a class="btn btn-secondary" href="mailto:alex.06dimitrov@gmail.com">Email me</a>
           </div>
           <div class="quick-facts" aria-label="Profile facts">
-            <div><strong>12</strong><span>public repositories</span></div>
-            <div><strong>3+</strong><span>project domains</span></div>
+            <div><strong data-count="12">12</strong><span>public repositories</span></div>
+            <div><strong data-count="3" data-suffix="+">3+</strong><span>project domains</span></div>
             <div><strong>∞</strong><span>room to learn</span></div>
           </div>
         </div>
 
         <div class="portrait-column reveal">
+          <div class="tech-satellites" aria-hidden="true">
+            <span>Angular</span>
+            <span>Strapi</span>
+            <span>DevOps</span>
+            <span>Mentoring</span>
+          </div>
           <div class="portrait-frame">
+            <span class="portrait-clock" data-sofia-clock>Sofia · --:--</span>
             <span class="portrait-label">Based in Sofia</span>
             <picture>
               <source type="image/webp" srcset="assets/profile-480.webp 480w, assets/profile.webp 768w" sizes="(max-width: 720px) min(370px, calc(100vw - 32px)), 34vw">
@@ -108,10 +116,10 @@
     <div class="marquee" aria-hidden="true">
       <div class="marquee-track">
         <div class="marquee-group">
-          <span>Angular</span><i>✦</i><span>React</span><i>✦</i><span>Strapi</span><i>✦</i><span>Real-time systems</span><i>✦</i><span>Accessible UI</span><i>✦</i>
+          <span>Angular</span><i>✦</i><span>React</span><i>✦</i><span>Strapi</span><i>✦</i><span>Real-time systems</span><i>✦</i><span>Accessible UI</span><i>✦</i><span>DevOps</span><i>✦</i><span>Mentoring</span><i>✦</i>
         </div>
         <div class="marquee-group">
-          <span>Angular</span><i>✦</i><span>React</span><i>✦</i><span>Strapi</span><i>✦</i><span>Real-time systems</span><i>✦</i><span>Accessible UI</span><i>✦</i>
+          <span>Angular</span><i>✦</i><span>React</span><i>✦</i><span>Strapi</span><i>✦</i><span>Real-time systems</span><i>✦</i><span>Accessible UI</span><i>✦</i><span>DevOps</span><i>✦</i><span>Mentoring</span><i>✦</i>
         </div>
       </div>
     </div>
@@ -158,7 +166,7 @@
                     <div class="chart-head"><span>Workflow activity</span><small>Last 7 days</small></div>
                     <div class="chart-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
                   </div>
-                  <div class="dashboard-feed"><span><i></i>Deployment completed</span><b>just now</b></div>
+                  <div class="dashboard-feed"><span data-feed><i></i>Deployment completed</span><b data-feed-time>just now</b></div>
                 </div>
               </div>
             </div>
