@@ -27,6 +27,7 @@
       <a href="../index.html" class="logo" aria-label="Back to Aleksandar Dimitrov portfolio">AD<span>.</span></a>
       <nav class="case-nav" aria-label="Case study navigation">
         <a href="../index.html#projects">← All work</a>
+        <a href="../resume.html">CV</a>
         <a href="mailto:alex.06dimitrov@gmail.com?subject=NestSyncFlow" class="nav-cta">Discuss the product</a>
       </nav>
     </div>
@@ -81,6 +82,37 @@
         <div class="case-prose reveal">
           <p class="lead">NestSyncFlow brings authentication, workflow state, live collaboration, analytics, and monetization into one coherent product foundation.</p>
           <p>The platform separates a responsive React experience from an Express API and a PostgreSQL data layer managed through Prisma. WebSocket events keep active clients synchronized, while JWT-based access protects user and workspace boundaries.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section case-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-index">01b / Decisions</p>
+          <h2>Problem, constraints,<br><em>trade-offs.</em></h2>
+        </div>
+        <div class="decision-grid">
+          <article class="reveal">
+            <h3>Problem</h3>
+            <p>Workflow tools go stale the moment two people edit at once. The product needed one shared source of truth, not a page that only looks live after refresh.</p>
+          </article>
+          <article class="reveal">
+            <h3>Constraints</h3>
+            <p>Private product, one full-stack owner, production-shaped stack: auth, relational data, realtime, analytics, and a path to paid plans — without turning it into a demo.</p>
+          </article>
+          <article class="reveal">
+            <h3>Decisions</h3>
+            <p>PostgreSQL + Prisma for typed relations. JWT for workspace boundaries. WebSockets for live state instead of polling. Stripe-ready hooks, not a fake checkout.</p>
+          </article>
+          <article class="reveal">
+            <h3>Outcome</h3>
+            <p>A working platform with four layers: client, API, persistence, and live events. Source stays private; architecture and product choices can be walked through in an interview.</p>
+          </article>
+          <article class="reveal">
+            <h3>What I’d change</h3>
+            <p>Ship an automated test suite earlier, and extract a public architecture note so hiring reviews don’t have to take “trust me” on a closed repo.</p>
+          </article>
         </div>
       </div>
     </section>
