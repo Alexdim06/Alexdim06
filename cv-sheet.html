@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aleksandar Dimitrov — CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0e1210;
+      --panel: #151a17;
+      --ink: #f4f2ea;
+      --muted: #a8aea8;
+      --dim: #7d867f;
+      --acid: #c8ff47;
+      --acid-soft: rgba(200, 255, 71, 0.12);
+      --line: rgba(243, 241, 233, 0.1);
+      --orange: #ff785a;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    html, body {
+      width: 210mm;
+      height: 297mm;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "DM Sans", system-ui, sans-serif;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    body {
+      overflow: hidden;
+    }
+
+    .sheet {
+      position: relative;
+      width: 210mm;
+      height: 297mm;
+      padding: 9mm 9mm 8mm;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 100% 0%, rgba(200, 255, 71, 0.1), transparent 34%),
+        radial-gradient(circle at 0% 100%, rgba(255, 120, 90, 0.06), transparent 30%),
+        linear-gradient(180deg, #121714 0%, #0c0f0d 100%);
+    }
+
+    .sheet::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 3.5px;
+      background: linear-gradient(90deg, var(--acid), #7ee787, var(--orange), var(--acid));
+    }
+
+    .top {
+      display: grid;
+      grid-template-columns: 34mm 1fr;
+      gap: 5mm;
+      align-items: start;
+      margin-bottom: 4.5mm;
+      padding-bottom: 4mm;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .photo {
+      position: relative;
+      width: 34mm;
+      height: 42mm;
+      border-radius: 3.2mm;
+      overflow: hidden;
+      border: 1px solid rgba(200, 255, 71, 0.4);
+      background: #0b0d0c;
+      box-shadow: 0 0 0 2.5px rgba(200, 255, 71, 0.08);
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 28%;
+      display: block;
+    }
+
+    .photo-badge {
+      position: absolute;
+      left: 1.6mm;
+      bottom: 1.6mm;
+      padding: 0.8mm 2mm;
+      border-radius: 999px;
+      background: rgba(11, 13, 12, 0.88);
+      border: 1px solid rgba(200, 255, 71, 0.35);
+      color: var(--acid);
+      font-size: 6.5pt;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .intro h1 {
+      font-family: Manrope, "DM Sans", sans-serif;
+      font-size: 22pt;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.6mm;
+    }
+
+    .intro h1 span {
+      color: var(--muted);
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    .role {
+      color: var(--acid);
+      font-size: 8pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 2mm;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 1.5mm;
+      margin-bottom: 2mm;
+      padding: 1mm 2.4mm;
+      border-radius: 999px;
+      background: var(--acid-soft);
+      border: 1px solid rgba(200, 255, 71, 0.28);
+      color: var(--acid);
+      font-size: 7pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .status i {
+      width: 1.8mm;
+      height: 1.8mm;
+      border-radius: 50%;
+      background: var(--acid);
+    }
+
+    .tagline {
+      max-width: 145mm;
+      color: var(--muted);
+      font-size: 8.4pt;
+      line-height: 1.35;
+      margin-bottom: 3mm;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2mm;
+    }
+
+    .metrics div {
+      padding: 2mm 2.2mm;
+      border-radius: 2mm;
+      background: rgba(200, 255, 71, 0.05);
+      border: 1px solid rgba(200, 255, 71, 0.18);
+    }
+
+    .metrics dt {
+      color: var(--acid);
+      font-size: 6.2pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-bottom: 0.6mm;
+    }
+
+    .metrics dd {
+      font-family: Manrope, sans-serif;
+      font-size: 7.8pt;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 58mm 1fr;
+      gap: 3.5mm;
+      height: calc(297mm - 9mm - 8mm - 52mm);
+    }
+
+    .col {
+      display: flex;
+      flex-direction: column;
+      gap: 2.6mm;
+      min-height: 0;
+    }
+
+    .card {
+      background: rgba(11, 13, 12, 0.55);
+      border: 1px solid var(--line);
+      border-radius: 2.4mm;
+      padding: 2.8mm 3mm;
+    }
+
+    .card.accent {
+      border-color: rgba(200, 255, 71, 0.28);
+      background: rgba(200, 255, 71, 0.05);
+    }
+
+    .card h2 {
+      color: var(--acid);
+      font-size: 7pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 2mm;
+    }
+
+    .contact li {
+      list-style: none;
+      padding: 1.4mm 0;
+      border-top: 1px solid rgba(243, 241, 233, 0.07);
+    }
+
+    .contact li:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    .contact span {
+      display: block;
+      color: var(--dim);
+      font-size: 6pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.3mm;
+    }
+
+    .contact a,
+    .contact b {
+      color: var(--ink);
+      font-size: 7.4pt;
+      font-weight: 600;
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2mm;
+    }
+
+    .tags span {
+      padding: 0.9mm 1.8mm;
+      border-radius: 999px;
+      border: 1px solid rgba(200, 255, 71, 0.22);
+      font-size: 6.6pt;
+      font-weight: 600;
+      color: var(--ink);
+      background: rgba(255, 255, 255, 0.015);
+    }
+
+    .bullets {
+      list-style: none;
+    }
+
+    .bullets li {
+      position: relative;
+      padding: 0.9mm 0 0.9mm 3.2mm;
+      color: var(--muted);
+      font-size: 7.4pt;
+      line-height: 1.3;
+    }
+
+    .bullets li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 2.2mm;
+      width: 1.4mm;
+      height: 1.4mm;
+      border-radius: 50%;
+      background: var(--acid);
+    }
+
+    .langs li {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      gap: 2mm;
+      padding: 1.3mm 0;
+      border-bottom: 1px solid rgba(243, 241, 233, 0.07);
+      font-size: 7.6pt;
+    }
+
+    .langs li:last-child { border-bottom: 0; }
+    .langs span { color: var(--muted); }
+
+    .card p,
+    .job li,
+    .product p {
+      color: var(--muted);
+      font-size: 7.6pt;
+      line-height: 1.35;
+    }
+
+    .card p strong { color: var(--ink); }
+
+    .job + .job {
+      margin-top: 2.4mm;
+      padding-top: 2.4mm;
+      border-top: 1px solid rgba(243, 241, 233, 0.07);
+    }
+
+    .job-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 2mm;
+      margin-bottom: 1mm;
+    }
+
+    .job h3 {
+      font-family: Manrope, sans-serif;
+      font-size: 8.6pt;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .job time {
+      color: var(--acid);
+      font-size: 6.4pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .job ul {
+      margin-left: 3.5mm;
+    }
+
+    .job li + li { margin-top: 0.6mm; }
+
+    .products {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.4mm;
+    }
+
+    .product {
+      padding: 2.4mm;
+      border-radius: 2mm;
+      border: 1px solid rgba(243, 241, 233, 0.09);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .product header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5mm;
+      margin-bottom: 1mm;
+    }
+
+    .product h3 {
+      font-family: Manrope, sans-serif;
+      font-size: 8.4pt;
+      font-weight: 700;
+    }
+
+    .badge {
+      padding: 0.5mm 1.5mm;
+      border-radius: 999px;
+      font-size: 5.8pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .badge.live {
+      color: var(--acid);
+      border: 1px solid rgba(200, 255, 71, 0.35);
+    }
+
+    .badge.private {
+      color: var(--orange);
+      border: 1px solid rgba(255, 120, 90, 0.35);
+    }
+
+    .meta {
+      color: var(--dim);
+      font-size: 6.4pt;
+      margin-bottom: 1.2mm;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.8mm;
+    }
+
+    .fill {
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="sheet">
+    <header class="top">
+      <div class="photo">
+        <img src="assets/profile.png" alt="Aleksandar Dimitrov" width="480" height="640">
+        <span class="photo-badge">Sofia · EU</span>
+      </div>
+      <div class="intro">
+        <div class="status"><i></i> Open to full-stack opportunities</div>
+        <div class="role">Full-stack developer · Angular &amp; Strapi</div>
+        <h1>Aleksandar <span>Dimitrov</span></h1>
+        <p class="tagline">I ship maintainable products — interface, content architecture, DevOps delivery, and frontend mentoring in one role.</p>
+        <dl class="metrics">
+          <div><dt>Products</dt><dd>2 flagship builds</dd></div>
+          <div><dt>Stack</dt><dd>Angular + Strapi</dd></div>
+          <div><dt>Leadership</dt><dd>Frontend mentoring</dd></div>
+          <div><dt>Work</dt><dd>Remote · Hybrid · Sofia</dd></div>
+        </dl>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="col">
+        <section class="card">
+          <h2>Contact</h2>
+          <ul class="contact">
+            <li><span>Email</span><a href="mailto:alex.06dimitrov@gmail.com">alex.06dimitrov@gmail.com</a></li>
+            <li><span>Portfolio</span><b>alexdim06.github.io</b></li>
+            <li><span>GitHub</span><b>github.com/Alexdim06</b></li>
+            <li><span>LinkedIn</span><b>/in/aleksandar-dimitrov-pya16</b></li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Core stack</h2>
+          <div class="tags">
+            <span>Angular</span><span>Strapi</span><span>TypeScript</span><span>JavaScript</span>
+            <span>HTML</span><span>CSS</span><span>React</span><span>Node.js</span>
+            <span>Express</span><span>PostgreSQL</span><span>Prisma</span><span>WebSocket</span>
+            <span>Git</span><span>Docker</span><span>Agile</span><span>Bootstrap</span>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Focus</h2>
+          <ul class="bullets">
+            <li>Production Angular + Strapi systems</li>
+            <li>CMS &amp; API architecture</li>
+            <li>DevOps-minded delivery</li>
+            <li>Frontend coordination &amp; mentoring</li>
+            <li>Product-minded communication</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Languages</h2>
+          <ul class="langs">
+            <li><strong>Bulgarian</strong><span>Native</span></li>
+            <li><strong>English</strong><span>Professional</span></li>
+          </ul>
+        </section>
+
+        <section class="card accent fill">
+          <h2>Availability</h2>
+          <p>Junior / mid full-stack roles. EU remote or Sofia hybrid/on-site. Start after a professional notice period.</p>
+        </section>
+      </aside>
+
+      <div class="col">
+        <section class="card">
+          <h2>Profile</h2>
+          <p>Full-stack developer at <strong>Industria Technology</strong> in Sofia. I work at an advanced level with Angular and Strapi across frontend, content systems, and APIs — while contributing to DevOps workflows and mentoring frontend developers. Background in business analysis helps me connect product intent with maintainable engineering.</p>
+        </section>
+
+        <section class="card">
+          <h2>Experience</h2>
+          <article class="job">
+            <div class="job-head">
+              <h3>Full-Stack Developer · Industria Technology</h3>
+              <time>Oct 2025 — Present · Sofia</time>
+            </div>
+            <ul>
+              <li>Deliver advanced Angular and Strapi solutions across UI, CMS architecture, and backend integration.</li>
+              <li>Support DevOps workflows so releases stay predictable and repeatable.</li>
+              <li>Coordinate frontend developers and help the team ship with consistent quality.</li>
+            </ul>
+          </article>
+          <article class="job">
+            <div class="job-head">
+              <h3>Business Analyst Intern</h3>
+              <time>7-month internship</time>
+            </div>
+            <ul>
+              <li>Prepared user stories, analyzed processes, and supported agile sprint planning.</li>
+            </ul>
+          </article>
+          <article class="job">
+            <div class="job-head">
+              <h3>Earlier roles</h3>
+              <time>2021 — 2024</time>
+            </div>
+            <p>Auto mechanic and florist — customer communication, diagnostics, organization, and ownership under real-world pressure.</p>
+          </article>
+        </section>
+
+        <section class="card">
+          <h2>Selected products</h2>
+          <div class="products">
+            <article class="product">
+              <header>
+                <h3>NestSyncFlow</h3>
+                <span class="badge private">Private</span>
+              </header>
+              <p class="meta">React · Express · PostgreSQL · Prisma · WebSocket · JWT · Stripe-ready</p>
+              <p>Real-time workflow platform with secure auth, live sync, analytics, and monetization-ready architecture.</p>
+            </article>
+            <article class="product">
+              <header>
+                <h3>UVE × SystemaWeb</h3>
+                <span class="badge live">Live</span>
+              </header>
+              <p class="meta">Chrome · Firefox · Stripe · SystemaWeb</p>
+              <p>HTML5 video extension + product site. 0.1×–16× speed, 600% volume boost, captions, templates, one Pro license.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="split">
+            <div>
+              <h2>Certificates</h2>
+              <p>JavaScript Fundamentals · HTML &amp; CSS Advanced · Agile / Scrum Foundations</p>
+            </div>
+            <div>
+              <h2>How I work</h2>
+              <p>Clear trade-offs, readable delivery, and communication that helps teams move — from product framing to shipped code.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

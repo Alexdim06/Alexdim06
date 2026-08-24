@@ -2009,37 +2009,6 @@ h2 {
   min-height: 100vh;
 }
 
-.resume-page .resume-nav .nav-cta {
-  cursor: pointer;
-  font: inherit;
-  background: transparent;
-}
-
-.resume-export-panel {
-  position: fixed;
-  z-index: 90;
-  right: 1rem;
-  bottom: 1rem;
-  width: min(17rem, calc(100% - 2rem));
-  padding: 0.95rem 1rem;
-  border: 1px solid rgba(200, 255, 71, 0.28);
-  border-radius: 14px;
-  background: rgba(11, 13, 12, 0.92);
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(12px);
-  font-size: 0.78rem;
-}
-
-.resume-export-panel strong {
-  color: var(--acid);
-}
-
-.resume-export-panel ol {
-  margin: 0.45rem 0 0 1rem;
-  color: var(--muted);
-  line-height: 1.45;
-}
-
 .resume-stage {
   position: relative;
   z-index: 1;
@@ -3566,7 +3535,6 @@ h2 {
   .ambient,
   .skip-link,
   .site-header,
-  .resume-export-panel,
   .resume-banner-actions,
   .no-print,
   .cursor-glow,

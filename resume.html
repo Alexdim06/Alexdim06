@@ -24,20 +24,10 @@
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="index.html">Portfolio</a>
         <a href="index.html#hire">Hiring snapshot</a>
-        <button class="nav-cta" type="button" data-print-cv>Export PDF</button>
+        <a class="nav-cta" href="assets/Aleksandar-Dimitrov-CV.pdf" download="Aleksandar-Dimitrov-CV.pdf">Download PDF</a>
       </nav>
     </div>
   </header>
-
-  <aside class="resume-export-panel no-print" aria-label="PDF export tips">
-    <p><strong>High-quality PDF</strong></p>
-    <ol>
-      <li>Click <strong>Export PDF</strong></li>
-      <li>Turn <strong>off</strong> Headers and footers</li>
-      <li>Turn <strong>on</strong> Background graphics</li>
-      <li>Paper: <strong>A4</strong> · Margins: Default</li>
-    </ol>
-  </aside>
 
   <main id="resume" class="resume-stage">
     <article class="resume-doc reveal">
@@ -70,7 +60,7 @@
         </div>
 
         <div class="resume-banner-actions no-print">
-          <button class="btn btn-primary" type="button" data-print-cv>Export PDF</button>
+          <a class="btn btn-primary" href="assets/Aleksandar-Dimitrov-CV.pdf" download="Aleksandar-Dimitrov-CV.pdf">Download PDF</a>
           <a class="btn btn-secondary" href="mailto:alex.06dimitrov@gmail.com">Email</a>
         </div>
       </header>
@@ -199,10 +189,5 @@
   </main>
 
   <script src="script.js"></script>
-  <script>
-    document.querySelectorAll("[data-print-cv]").forEach((btn) => {
-      btn.addEventListener("click", () => window.print());
-    });
-  </script>
 </body>
 </html>
