@@ -11,6 +11,11 @@
   <meta property="og:url" content="https://alexdim06.github.io/Alexdim06/">
   <meta property="og:image" content="https://alexdim06.github.io/Alexdim06/assets/profile.png">
   <link rel="canonical" href="https://alexdim06.github.io/Alexdim06/">
+  <script>
+    if (location.pathname.endsWith("/index.html")) {
+      history.replaceState(null, "", location.pathname.slice(0, -"index.html".length) + location.search + location.hash);
+    }
+  </script>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <title>Aleksandar Dimitrov — Software Developer</title>
   <script type="application/ld+json">
