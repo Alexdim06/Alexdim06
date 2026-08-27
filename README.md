@@ -110,5 +110,5 @@ LEARNING       curiosity ─── experiment ─── improve ─── repeat
   </a>
   <br /><br />
   <img src="https://img.shields.io/badge/Sofia%2C%20Bulgaria-111513?style=for-the-badge&logo=googlemaps&logoColor=C8FF47" alt="Sofia, Bulgaria" />
-  <img src="https://img.shields.io/badge/Open%20to%20opportunities-C8FF47?style=for-the-badge&logo=handshake&logoColor=10130C" alt="Open to opportunities" />
+  <img src="https://img.shields.io/badge/Available-C8FF47?style=for-the-badge&logo=handshake&logoColor=10130C" alt="Available" />
 </div>
