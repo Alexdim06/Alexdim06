@@ -51,13 +51,13 @@ Before engineering, I worked as a business analyst intern. That experience still
       <h3>⚡ NestSyncFlow</h3>
       <p>A real-time full-stack workflow platform with secure authentication, typed relational data, live synchronization, analytics, and a monetization-ready architecture.</p>
       <p><code>React</code> <code>Express</code> <code>PostgreSQL</code> <code>Prisma</code> <code>WebSocket</code></p>
-      <a href="https://alexdim06.github.io/Alexdim06/projects/nestsyncflow.html"><strong>Explore the product case study →</strong></a>
+      <a href="https://alexdim06.github.io/Alexdim06/projects/nestsyncflow/"><strong>Explore the product case study →</strong></a>
     </td>
     <td width="50%" valign="top">
       <h3>🎬 UVE × SystemaWeb</h3>
       <p>One connected product ecosystem: an advanced HTML5 video-control extension plus its official web, content, pricing, and Stripe-powered Pro licensing platform.</p>
       <p><code>Browser Extension</code> <code>Web Platform</code> <code>Stripe</code></p>
-      <a href="https://alexdim06.github.io/Alexdim06/projects/uve.html"><strong>Explore the UVE showcase →</strong></a><br />
+      <a href="https://alexdim06.github.io/Alexdim06/projects/uve/"><strong>Explore the UVE showcase →</strong></a><br />
       <a href="https://systemaweb.com/"><strong>Open SystemaWeb →</strong></a>
     </td>
   </tr>

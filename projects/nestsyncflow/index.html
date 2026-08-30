@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NestSyncFlow case study — a real-time full-stack workflow platform built with React, Express, PostgreSQL, Prisma, WebSocket, JWT, and Stripe-ready architecture.">
+  <meta name="theme-color" content="#0b0d0c">
+  <meta property="og:title" content="NestSyncFlow — Product Case Study">
+  <meta property="og:description" content="Inside the architecture and product thinking behind a synchronized, real-time workflow platform.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <title>NestSyncFlow — Product Case Study</title>
+  <script>
+    if (location.pathname.endsWith("/index.html")) {
+      history.replaceState(null, "", location.pathname.slice(0, -"index.html".length) + location.search + location.hash);
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body class="case-study-page">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="scrollProgress" class="scroll-progress" aria-hidden="true"></div>
+  <div id="cursorGlow" class="cursor-glow" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="../../" class="logo" aria-label="Back to Aleksandar Dimitrov portfolio">AD<span>.</span></a>
+      <nav class="case-nav" aria-label="Case study navigation">
+        <a href="../../#projects">← All work</a>
+        <a href="../../resume/">CV</a>
+        <a href="mailto:alex.06dimitrov@gmail.com?subject=NestSyncFlow" class="nav-cta">Discuss the product</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="case-hero">
+      <div class="container">
+        <div class="case-intro reveal">
+          <p class="section-index">Private product case study / 2025</p>
+          <h1>NestSync<span>Flow</span></h1>
+          <p class="case-lead">A full-stack platform designed to keep people, workflows, and product data synchronized in real time.</p>
+          <div class="case-tags">
+            <span>React</span><span>Express</span><span>PostgreSQL</span><span>Prisma</span><span>WebSocket</span><span>JWT</span>
+          </div>
+        </div>
+
+        <div class="case-dashboard reveal">
+          <div class="product-window" role="img" aria-label="Conceptual NestSyncFlow dashboard preview">
+            <div class="window-bar"><i></i><i></i><i></i><span>nestsync / product overview</span><b>Live</b></div>
+            <div class="dashboard">
+              <div class="dashboard-nav">
+                <strong>NS</strong>
+                <span class="active"></span><span></span><span></span><span></span>
+              </div>
+              <div class="dashboard-main">
+                <div class="dashboard-title"><span>Workspace overview</span><i>•••</i></div>
+                <div class="dashboard-stats">
+                  <div><small>Workflow state</small><strong>Synced</strong><em>Live</em></div>
+                  <div><small>Team updates</small><strong>Real-time</strong><em>Socket</em></div>
+                  <div><small>Analytics</small><strong>Ready</strong><em>Events</em></div>
+                </div>
+                <div class="dashboard-chart">
+                  <div class="chart-head"><span>Workflow activity</span><small>Last 7 days</small></div>
+                  <div class="chart-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                </div>
+                <div class="dashboard-feed"><span data-feed><i></i>Deployment completed</span><b data-feed-time>just now</b></div>
+              </div>
+            </div>
+          </div>
+          <p class="concept-note">Conceptual product visualization · Source code remains private</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="architecture" class="section case-section">
+      <div class="container case-split">
+        <div class="section-heading reveal">
+          <p class="section-index">01 / Product idea</p>
+          <h2>One shared flow.<br><em>No stale state.</em></h2>
+        </div>
+        <div class="case-prose reveal">
+          <p class="lead">NestSyncFlow brings authentication, workflow state, live collaboration, analytics, and monetization into one coherent product foundation.</p>
+          <p>The platform separates a responsive React experience from an Express API and a PostgreSQL data layer managed through Prisma. WebSocket events keep active clients synchronized, while JWT-based access protects user and workspace boundaries.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section case-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-index">01b / Decisions</p>
+          <h2>Problem, constraints,<br><em>trade-offs.</em></h2>
+        </div>
+        <div class="decision-grid">
+          <article class="reveal">
+            <h3>Problem</h3>
+            <p>Workflow tools go stale the moment two people edit at once. The product needed one shared source of truth, not a page that only looks live after refresh.</p>
+          </article>
+          <article class="reveal">
+            <h3>Constraints</h3>
+            <p>Private product, one full-stack owner, production-shaped stack: auth, relational data, realtime, analytics, and a path to paid plans — without turning it into a demo.</p>
+          </article>
+          <article class="reveal">
+            <h3>Decisions</h3>
+            <p>PostgreSQL + Prisma for typed relations. JWT for workspace boundaries. WebSockets for live state instead of polling. Stripe-ready hooks, not a fake checkout.</p>
+          </article>
+          <article class="reveal">
+            <h3>Outcome</h3>
+            <p>A working platform with four layers: client, API, persistence, and live events. Source stays private; architecture and product choices can be walked through in an interview.</p>
+          </article>
+          <article class="reveal">
+            <h3>What I’d change</h3>
+            <p>Ship an automated test suite earlier, and extract a public architecture note so hiring reviews don’t have to take “trust me” on a closed repo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section case-section case-dark">
+      <div class="container">
+        <div class="section-heading section-heading-row reveal">
+          <div>
+            <p class="section-index">02 / Capabilities</p>
+            <h2>Built as a product,<br><em>not a demo.</em></h2>
+          </div>
+          <p class="case-side-note">A foundation designed to grow from useful workflow tooling into a sustainable SaaS product.</p>
+        </div>
+        <div class="capability-grid">
+          <article class="capability-card reveal"><span>01</span><h3>Secure access</h3><p>JWT authentication and clear user boundaries provide the base for protected workspaces and personalized experiences.</p></article>
+          <article class="capability-card reveal"><span>02</span><h3>Live synchronization</h3><p>WebSocket updates propagate workflow changes without requiring users to refresh or work from stale information.</p></article>
+          <article class="capability-card reveal"><span>03</span><h3>Relational data</h3><p>PostgreSQL and Prisma model users, workflows, and product relationships with a maintainable typed data layer.</p></article>
+          <article class="capability-card reveal"><span>04</span><h3>Product analytics</h3><p>A dashboard surfaces activity and performance signals so decisions can be based on visible product behavior.</p></article>
+          <article class="capability-card reveal"><span>05</span><h3>Monetization-ready</h3><p>The product flow is structured for Stripe integration and a path from core utility to subscription-based plans.</p></article>
+          <article class="capability-card reveal"><span>06</span><h3>Scalable separation</h3><p>Frontend, API, and persistence responsibilities remain distinct, making future features easier to evolve.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section architecture-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-index">03 / System view</p>
+          <h2>From interface<br><em>to live event.</em></h2>
+        </div>
+        <div class="architecture-flow reveal" aria-label="NestSyncFlow architecture">
+          <div><span>01</span><strong>React client</strong><small>Interface &amp; state</small></div>
+          <i>→</i>
+          <div><span>02</span><strong>Express API</strong><small>Auth &amp; business logic</small></div>
+          <i>→</i>
+          <div><span>03</span><strong>Prisma + PostgreSQL</strong><small>Typed persistence</small></div>
+          <i>↗</i>
+          <div><span>04</span><strong>WebSocket layer</strong><small>Real-time updates</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section">
+      <div class="container contact-inner reveal">
+        <p class="section-index">Want the deeper walkthrough?</p>
+        <h2>Let’s talk about<br><em>NestSyncFlow.</em></h2>
+        <p>The codebase is private, but the product decisions, architecture, and implementation can be discussed directly.</p>
+        <a class="contact-email" href="mailto:alex.06dimitrov@gmail.com?subject=NestSyncFlow%20case%20study">Request the case study <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Aleksandar Dimitrov</p>
+      <p><a href="../../">Back to portfolio</a></p>
+    </div>
+  </footer>
+
+  <script src="../../script.js"></script>
+</body>
+</html>
