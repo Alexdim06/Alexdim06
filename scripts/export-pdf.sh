@@ -47,6 +47,7 @@ fi
   --run-all-compositor-stages-before-draw \
   --virtual-time-budget=15000 \
   --print-to-pdf="$PDF" \
+  --print-to-pdf-no-header \
   "$URL"
 
 SIZE=$(wc -c < "$PDF" | tr -d ' ')
