@@ -2,7 +2,7 @@
 set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 PDF="$ROOT/assets/Aleksandar-Dimitrov-CV.pdf"
-URL="http://127.0.0.1:8765/resume/"
+URL="http://127.0.0.1:8765/resume/?pdf=1"
 
 cd "$ROOT"
 
@@ -46,6 +46,7 @@ fi
   --no-pdf-header-footer \
   --run-all-compositor-stages-before-draw \
   --virtual-time-budget=15000 \
+  --prefer-css-page-size \
   --print-to-pdf="$PDF" \
   --print-to-pdf-no-header \
   "$URL"

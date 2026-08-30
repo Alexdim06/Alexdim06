@@ -3567,7 +3567,7 @@ h2 {
 
 @media print {
   @page {
-    size: A4 portrait;
+    size: 210mm 297mm;
     margin: 0;
   }
 
@@ -3578,7 +3578,12 @@ h2 {
   .resume-banner-actions,
   .no-print,
   .cursor-glow,
-  .scroll-progress {
+  .scroll-progress,
+  .resume-doc-glow,
+  .resume-doc-accent,
+  .resume-doc-grid,
+  .resume-portrait-ring,
+  .resume-portrait-orbit {
     display: none !important;
   }
 
@@ -3586,11 +3591,12 @@ h2 {
   body.resume-page {
     margin: 0 !important;
     padding: 0 !important;
-    width: 100% !important;
-    min-height: 100% !important;
+    width: 210mm !important;
+    height: 297mm !important;
+    overflow: hidden !important;
     background: #0b0d0c !important;
     color: #f3f1e9 !important;
-    font-size: 8.6pt;
+    font-size: 10pt;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }
@@ -3600,26 +3606,21 @@ h2 {
     transform: none !important;
   }
 
-  .resume-status,
-  .resume-role,
-  .resume-panel h2,
-  .resume-metrics dt,
-  .resume-contact span,
-  .resume-entry time,
-  .resume-portrait-badge {
-    letter-spacing: 0.01em !important;
-    word-spacing: normal !important;
-  }
-
   .resume-stage {
-    width: 100%;
+    width: 210mm;
+    height: 297mm;
     max-width: none;
     margin: 0;
-    padding: 5.5mm 6mm 6mm;
+    padding: 7mm 8mm 8mm;
+    box-sizing: border-box;
   }
 
   .resume-doc {
-    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100%;
+    overflow: hidden;
     padding: 0;
     border: none;
     border-radius: 0;
@@ -3630,78 +3631,99 @@ h2 {
     page-break-after: avoid;
   }
 
-  .resume-doc-glow {
-    opacity: 0.35;
-    filter: none;
-  }
-
-  .resume-doc-accent,
-  .resume-doc-glow,
-  .resume-doc-grid,
-  .resume-portrait-ring,
-  .resume-portrait-orbit {
-    animation: none !important;
-  }
-
   .resume-banner {
-    grid-template-columns: 118px minmax(0, 1fr);
-    gap: 0.75rem 0.9rem;
-    margin-bottom: 0.65rem;
-    padding-bottom: 0.65rem;
+    display: grid;
+    grid-template-columns: 36mm minmax(0, 1fr);
+    gap: 4mm 5mm;
+    align-items: start;
+    margin-bottom: 4.5mm;
+    padding-bottom: 4.5mm;
+    border-bottom: 1px solid rgba(200, 255, 71, 0.18);
     page-break-inside: avoid;
+    flex-shrink: 0;
   }
 
   .resume-portrait {
-    width: 118px;
+    width: 36mm;
+    grid-row: span 2;
     box-shadow: none;
   }
 
-  .resume-portrait-orbit {
-    display: none;
+  .resume-portrait-badge {
+    font-size: 6pt;
+    padding: 0.8mm 1.6mm;
+  }
+
+  .resume-status {
+    font-size: 7pt;
+    margin-bottom: 1.5mm;
+  }
+
+  .resume-role {
+    font-size: 7.2pt;
+    margin-bottom: 1.5mm;
+    letter-spacing: 0.04em;
+    color: #c8ff47 !important;
   }
 
   .resume-banner h1 {
-    font-size: 1.55rem;
-    margin-bottom: 0.35rem;
+    font-size: 21pt;
+    line-height: 1.02;
+    margin-bottom: 2mm;
+  }
+
+  .resume-banner h1 em {
+    color: #a5a69f !important;
   }
 
   .resume-tagline {
-    font-size: 0.72rem;
-    margin-bottom: 0.45rem;
-    line-height: 1.35;
+    font-size: 9pt;
+    margin-bottom: 3mm;
+    line-height: 1.42;
+    max-width: none;
   }
 
   .resume-metrics {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 0.35rem;
+    gap: 2mm;
   }
 
   .resume-metrics div {
-    padding: 0.35rem 0.4rem;
+    padding: 2mm 2.2mm;
   }
 
   .resume-metrics dt {
-    font-size: 0.52rem;
-    letter-spacing: 0.02em;
+    font-size: 6pt;
+    letter-spacing: 0.05em;
+    color: #c8ff47 !important;
   }
 
   .resume-metrics dd {
-    font-size: 0.64rem;
+    font-size: 8pt;
+    line-height: 1.25;
   }
 
   .resume-body {
-    grid-template-columns: 0.68fr 1.32fr;
-    gap: 0.55rem;
+    flex: 1;
+    display: grid;
+    grid-template-columns: 68mm minmax(0, 1fr);
+    gap: 4mm;
+    align-items: stretch;
+    min-height: 0;
   }
 
   .resume-rail,
   .resume-main {
-    gap: 0.45rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2.6mm;
+    height: 100%;
   }
 
   .resume-panel {
-    padding: 0.45rem 0.5rem;
-    border-radius: 8px;
+    padding: 2.8mm 3mm;
+    border-radius: 2mm;
     background: rgba(11, 13, 12, 0.72) !important;
     break-inside: avoid;
     page-break-inside: avoid;
@@ -3712,9 +3734,10 @@ h2 {
   }
 
   .resume-panel h2 {
-    margin-bottom: 0.35rem;
-    font-size: 0.58rem;
-    letter-spacing: 0.03em;
+    margin-bottom: 1.8mm;
+    font-size: 7pt;
+    letter-spacing: 0.06em;
+    color: #c8ff47 !important;
   }
 
   .resume-panel > p,
@@ -3723,19 +3746,102 @@ h2 {
   .resume-product-grid p,
   .resume-products-note,
   .resume-bullets li,
-  .resume-contact a {
-    font-size: 0.68rem;
-    line-height: 1.32;
+  .resume-contact a,
+  .resume-lang-list li {
+    font-size: 8.4pt;
+    line-height: 1.38;
     color: #e8e6de !important;
   }
 
+  .resume-contact li {
+    padding: 1.2mm 0;
+  }
+
   .resume-contact span,
-  .resume-role,
   .resume-entry time,
   .resume-meta {
-    font-size: 0.56rem;
-    letter-spacing: 0.02em;
+    font-size: 6.6pt;
+    letter-spacing: 0.04em;
     color: #c8ff47 !important;
+  }
+
+  .resume-tags {
+    gap: 1.4mm;
+  }
+
+  .resume-tags span {
+    padding: 0.8mm 1.6mm;
+    font-size: 6.8pt;
+  }
+
+  .resume-bullets li,
+  .resume-entry li {
+    margin-top: 1mm;
+  }
+
+  .resume-sub {
+    margin-top: 1mm;
+    margin-left: 3mm;
+  }
+
+  .resume-sub li {
+    font-size: 8pt;
+  }
+
+  .resume-entry + .resume-entry {
+    margin-top: 2.5mm;
+    padding-top: 2.5mm;
+    border-top: 1px solid rgba(243, 241, 233, 0.08);
+  }
+
+  .resume-entry h3 {
+    font-size: 9pt;
+  }
+
+  .resume-entry-head {
+    margin-bottom: 1.5mm;
+  }
+
+  .resume-product-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5mm;
+  }
+
+  .resume-product-grid article {
+    padding: 2.5mm;
+  }
+
+  .resume-product-grid h3 {
+    font-size: 8.6pt;
+  }
+
+  .resume-product-grid a {
+    font-size: 7.6pt;
+    margin-top: 1.5mm;
+  }
+
+  .resume-panel-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3mm;
+  }
+
+  .resume-products-note {
+    font-size: 7.6pt;
+    margin-bottom: 2mm;
+    color: #a8aea8 !important;
+  }
+
+  .badge-live,
+  .badge-private,
+  .badge-personal {
+    font-size: 6pt;
+    padding: 0.6mm 1.4mm;
+  }
+
+  .badge-personal {
+    color: #f3f1e9 !important;
+    border-color: rgba(243, 241, 233, 0.22) !important;
   }
 
   .resume-status,
@@ -3745,10 +3851,6 @@ h2 {
   .badge-live,
   .badge-personal {
     color: #c8ff47 !important;
-  }
-
-  .resume-banner h1 em {
-    color: #a5a69f !important;
   }
 
   .resume-tags span,
@@ -3763,46 +3865,9 @@ h2 {
     print-color-adjust: exact !important;
   }
 
-  .resume-entry + .resume-entry {
-    margin-top: 0.45rem;
-    padding-top: 0.45rem;
-  }
-
-  .resume-entry h3 {
-    font-size: 0.74rem;
-  }
-
-  .resume-product-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 0.4rem;
-  }
-
-  .resume-product-grid article {
-    padding: 0.45rem;
-  }
-
-  .resume-product-grid h3 {
-    font-size: 0.72rem;
-  }
-
-  .resume-panel-split {
-    grid-template-columns: 1fr 1fr;
-    gap: 0.45rem;
-  }
-
   a {
     color: #c8ff47 !important;
     text-decoration: underline;
     text-underline-offset: 2px;
-  }
-
-  .resume-products-note {
-    font-size: 0.62rem;
-    color: #a8aea8 !important;
-  }
-
-  .badge-personal {
-    color: #f3f1e9 !important;
-    border-color: rgba(243, 241, 233, 0.22) !important;
   }
 }
