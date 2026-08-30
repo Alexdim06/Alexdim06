@@ -2432,7 +2432,7 @@ h2 {
 
 .resume-product-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 0.55rem;
 }
 
@@ -3960,7 +3960,7 @@ html.pdf-export .reveal {
   }
 
   .resume-product-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 2mm;
   }
 
