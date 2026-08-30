@@ -2409,13 +2409,18 @@ h2 {
   line-height: 1.45;
 }
 
-.resume-inline-availability strong {
-  display: block;
-  margin-bottom: 0.2rem;
-  color: var(--acid);
-  font-size: 0.68rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+.resume-panel-accent .resume-inline-availability {
+  margin-top: 0.55rem;
+  padding-top: 0.55rem;
+  border-top: 1px solid rgba(200, 255, 71, 0.15);
+}
+
+.resume-panel-accent .resume-inline-availability strong {
+  display: inline;
+  margin-right: 0.35rem;
+  font-size: inherit;
+  letter-spacing: 0.04em;
+  text-transform: none;
 }
 
 .resume-langs-row {
@@ -3673,7 +3678,7 @@ h2 {
     max-width: 210mm !important;
     transform: none !important;
     overflow: visible !important;
-    padding: 8mm 10mm !important;
+    padding: 0 !important;
     box-sizing: border-box;
     border: none;
     border-radius: 0;
@@ -3681,64 +3686,88 @@ h2 {
     box-shadow: none;
   }
 
+  .resume-page-one,
+  .resume-continued {
+    box-sizing: border-box;
+    padding: 9mm 9mm 10mm;
+  }
+
   .resume-page-one {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr);
+    min-height: 297mm;
     page-break-after: always;
     break-after: page;
   }
 
   .resume-page-one .resume-banner {
-    grid-template-columns: 34mm minmax(0, 1fr);
-    gap: 4mm 5mm;
-    margin-bottom: 4mm;
-    padding-bottom: 4mm;
+    grid-template-columns: 36mm minmax(0, 1fr);
+    gap: 5mm 6mm;
+    margin-bottom: 5mm;
+    padding-bottom: 5mm;
   }
 
   .resume-page-one .resume-portrait {
-    width: 34mm;
+    width: 36mm;
   }
 
   .resume-page-one .resume-banner h1 {
-    font-size: 18pt;
+    font-size: 19pt;
   }
 
   .resume-page-one .resume-tagline {
-    font-size: 8.5pt;
+    font-size: 8.8pt;
+    line-height: 1.42;
   }
 
   .resume-page-one .resume-body {
-    grid-template-columns: 64mm minmax(0, 1fr);
-    gap: 4mm;
+    grid-template-columns: 68mm minmax(0, 1fr);
+    gap: 5mm;
+    align-items: stretch;
+    min-height: 0;
   }
 
   .resume-page-one .resume-rail,
   .resume-page-one .resume-main {
-    gap: 2.5mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3.5mm;
+    height: 100%;
   }
 
   .resume-page-one .resume-panel {
-    padding: 2.5mm 3mm;
+    padding: 3.2mm 3.6mm;
   }
 
   .resume-page-one .resume-panel > p,
   .resume-page-one .resume-entry ul,
   .resume-page-one .resume-entry p,
   .resume-page-one .resume-bullets li,
-  .resume-page-one .resume-contact a {
-    font-size: 8.2pt;
-    line-height: 1.34;
+  .resume-page-one .resume-contact a,
+  .resume-page-one .resume-lang-list li,
+  .resume-page-one .resume-inline-availability {
+    font-size: 8.4pt;
+    line-height: 1.38;
   }
 
-  .resume-panel-langs .resume-langs-row {
-    display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
-    gap: 5mm;
-    align-items: start;
+  .resume-continued {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 6mm;
+    min-height: 297mm;
+    margin-top: 0;
+    padding-top: 10mm;
+    border-top: 2px solid rgba(200, 255, 71, 0.12);
   }
 
-  .resume-panel-langs .resume-inline-availability {
-    margin: 0;
-    padding: 0;
-    border-top: none;
+  .resume-continued .resume-product-grid article {
+    min-height: 38mm;
+  }
+
+  .resume-continued .resume-panel-split > div {
+    min-height: 22mm;
   }
 
   .resume-banner {
@@ -3829,12 +3858,10 @@ h2 {
 
   .resume-continued {
     margin-top: 0;
-    gap: 4mm;
-    padding-top: 0;
   }
 
   .resume-panel {
-    padding: 3mm 3.5mm;
+    padding: 3.5mm 4mm;
     border-radius: 2.5mm;
     border: 1px solid rgba(243, 241, 233, 0.1);
     background: rgba(16, 20, 18, 0.95) !important;
@@ -3930,32 +3957,33 @@ h2 {
 
   .resume-product-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 4mm;
+    gap: 5mm;
   }
 
   .resume-product-grid article {
-    padding: 3mm;
+    padding: 4mm;
   }
 
   .resume-product-grid h3 {
-    font-size: 9pt;
+    font-size: 9.5pt;
   }
 
   .resume-product-grid a {
-    font-size: 7.8pt;
-    margin-top: 1.5mm;
+    font-size: 8pt;
+    margin-top: 2mm;
     margin-right: 0.75rem;
   }
 
   .resume-panel-split {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4mm;
+    gap: 5mm;
+    margin-bottom: 2mm;
   }
 
   .resume-products-note {
-    font-size: 8pt;
-    margin-bottom: 2.5mm;
+    font-size: 8.2pt;
+    margin-bottom: 3mm;
     color: #a8aea8 !important;
   }
 
