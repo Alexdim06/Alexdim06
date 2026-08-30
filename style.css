@@ -2464,25 +2464,40 @@ h2 {
 
 .resume-product-grid header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 0.45rem;
-  margin-bottom: 0.2rem;
+  gap: 0.35rem;
+  margin-bottom: 0.35rem;
+}
+
+.resume-products-note {
+  margin: 0 0 0.65rem;
+  color: var(--muted);
+  font-size: 0.74rem;
+  line-height: 1.45;
 }
 
 .resume-product-grid h3 {
   font-family: var(--font-display);
   font-size: 0.88rem;
+  margin-right: auto;
 }
 
 .badge-live,
-.badge-private {
+.badge-private,
+.badge-personal {
   padding: 0.14rem 0.38rem;
   border-radius: 999px;
   font-size: 0.56rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+}
+
+.badge-personal {
+  border: 1px solid rgba(243, 241, 233, 0.18);
+  color: var(--paper);
 }
 
 .badge-live {
@@ -2498,10 +2513,21 @@ h2 {
 .resume-product-grid a {
   display: inline-block;
   margin-top: 0.45rem;
+  margin-right: 0.65rem;
   color: var(--acid);
   font-size: 0.72rem;
   font-weight: 700;
   text-decoration: none;
+}
+
+.resume-product-grid a:hover {
+  text-decoration: underline;
+}
+
+.resume-product-grid header .badge-live,
+.resume-product-grid header .badge-private,
+.resume-product-grid header .badge-personal {
+  margin-left: 0;
 }
 
 .resume-panel-split {
@@ -3689,6 +3715,7 @@ h2 {
   .resume-entry ul,
   .resume-entry p,
   .resume-product-grid p,
+  .resume-products-note,
   .resume-bullets li,
   .resume-contact a {
     font-size: 0.68rem;
@@ -3709,7 +3736,8 @@ h2 {
   .resume-panel h2,
   .resume-entry time,
   .resume-product-grid a,
-  .badge-live {
+  .badge-live,
+  .badge-personal {
     color: #c8ff47 !important;
   }
 
@@ -3720,6 +3748,7 @@ h2 {
   .resume-tags span,
   .badge-live,
   .badge-private,
+  .badge-personal,
   .resume-portrait-badge,
   .resume-status i,
   .resume-metrics div,
@@ -3757,6 +3786,17 @@ h2 {
 
   a {
     color: #c8ff47 !important;
-    text-decoration: none;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .resume-products-note {
+    font-size: 0.62rem;
+    color: #a8aea8 !important;
+  }
+
+  .badge-personal {
+    color: #f3f1e9 !important;
+    border-color: rgba(243, 241, 233, 0.22) !important;
   }
 }
