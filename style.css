@@ -2226,6 +2226,7 @@ h2 {
 }
 
 .resume-panel > p,
+.resume-panel p,
 .resume-entry ul,
 .resume-entry p,
 .resume-product-grid p {
@@ -2489,6 +2490,89 @@ h2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.85rem;
+}
+
+.resume-panel-split > div > p {
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+
+.resume-bottom {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.85rem;
+}
+
+.resume-panel-wide {
+  grid-column: 1 / -1;
+}
+
+.resume-bottom .resume-panel {
+  display: flex;
+  flex-direction: column;
+  min-height: 6.5rem;
+  padding: 0.85rem 0.95rem;
+}
+
+.resume-bottom .resume-panel h2 {
+  margin-bottom: 0.55rem;
+}
+
+.resume-bottom .resume-bullets li,
+.resume-bottom .resume-lang-list li,
+.resume-bottom .resume-panel > p {
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+
+.resume-bottom .resume-bullets li {
+  padding-top: 0.28rem;
+  padding-bottom: 0.28rem;
+}
+
+.resume-bottom .resume-lang-list li {
+  padding: 0.42rem 0;
+}
+
+.resume-bottom .resume-bullets {
+  flex: 1 1 auto;
+}
+
+html.pdf-export body.resume-page {
+  background: #0b0d0c !important;
+}
+
+html.pdf-export .grain,
+html.pdf-export .ambient,
+html.pdf-export .site-header {
+  display: none !important;
+}
+
+html.pdf-export .resume-stage {
+  width: 210mm;
+  max-width: 210mm;
+  margin: 0;
+  padding: 0;
+}
+
+html.pdf-export .resume-doc {
+  min-height: 0;
+  padding: 5.5mm 6mm 6mm;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+html.pdf-export .resume-bottom {
+  margin-top: 0.55rem;
+}
+
+html.pdf-export .reveal {
+  opacity: 1;
+  transform: none;
 }
 
 @keyframes resumeGlow {
@@ -3091,8 +3175,13 @@ h2 {
 
   .resume-body,
   .resume-product-grid,
-  .resume-panel-split {
+  .resume-panel-split,
+  .resume-bottom {
     grid-template-columns: 1fr;
+  }
+
+  .resume-panel-wide {
+    grid-column: auto;
   }
 
   .resume-banner {
@@ -3768,6 +3857,23 @@ h2 {
 
   .resume-entry ul {
     margin-left: 0.8rem;
+  }
+
+  .resume-panel-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2mm;
+  }
+
+  .resume-bottom {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2mm;
+    margin-top: 2mm;
+  }
+
+  .resume-panel-wide {
+    grid-column: 1 / -1;
   }
 
   .resume-product-grid {
