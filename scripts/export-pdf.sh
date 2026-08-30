@@ -60,11 +60,7 @@ if [[ "$SIZE" -lt 50000 ]]; then
 fi
 
 if [[ "$PAGES" != "?" && "$PAGES" -gt 1 ]]; then
-  echo "Warning: PDF has ${PAGES} pages — tuning may be needed for one-page output." >&2
-fi
-
-if [[ "$PAGES" != "?" && "$PAGES" -gt 3 ]]; then
-  echo "PDF has ${PAGES} pages — expected 1–3." >&2
+  echo "PDF has ${PAGES} pages — expected exactly 1." >&2
   exit 1
 fi
 
