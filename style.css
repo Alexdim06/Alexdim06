@@ -3596,7 +3596,7 @@ h2 {
     overflow: hidden !important;
     background: #0b0d0c !important;
     color: #f3f1e9 !important;
-    font-size: 10pt;
+    font-size: 9pt;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }
@@ -3611,16 +3611,18 @@ h2 {
     height: 297mm;
     max-width: none;
     margin: 0;
-    padding: 7mm 8mm 8mm;
+    padding: 5mm 6mm 6mm;
     box-sizing: border-box;
+    overflow: hidden;
   }
 
   .resume-doc {
+    --pdf-scale: 0.905;
+    width: calc((210mm - 12mm) / var(--pdf-scale));
+    transform: scale(var(--pdf-scale));
+    transform-origin: top left;
     display: flex;
     flex-direction: column;
-    height: 100%;
-    min-height: 100%;
-    overflow: hidden;
     padding: 0;
     border: none;
     border-radius: 0;
@@ -3629,47 +3631,48 @@ h2 {
       #101412 !important;
     box-shadow: none;
     page-break-after: avoid;
+    page-break-inside: avoid;
   }
 
   .resume-banner {
     display: grid;
-    grid-template-columns: 36mm minmax(0, 1fr);
-    gap: 4mm 5mm;
+    grid-template-columns: 32mm minmax(0, 1fr);
+    gap: 3mm 4mm;
     align-items: start;
-    margin-bottom: 4.5mm;
-    padding-bottom: 4.5mm;
+    margin-bottom: 3mm;
+    padding-bottom: 3mm;
     border-bottom: 1px solid rgba(200, 255, 71, 0.18);
     page-break-inside: avoid;
     flex-shrink: 0;
   }
 
   .resume-portrait {
-    width: 36mm;
+    width: 32mm;
     grid-row: span 2;
     box-shadow: none;
   }
 
   .resume-portrait-badge {
-    font-size: 6pt;
-    padding: 0.8mm 1.6mm;
+    font-size: 5.8pt;
+    padding: 0.6mm 1.2mm;
   }
 
   .resume-status {
-    font-size: 7pt;
-    margin-bottom: 1.5mm;
+    font-size: 6.8pt;
+    margin-bottom: 1mm;
   }
 
   .resume-role {
-    font-size: 7.2pt;
-    margin-bottom: 1.5mm;
+    font-size: 6.8pt;
+    margin-bottom: 1mm;
     letter-spacing: 0.04em;
     color: #c8ff47 !important;
   }
 
   .resume-banner h1 {
-    font-size: 21pt;
+    font-size: 18pt;
     line-height: 1.02;
-    margin-bottom: 2mm;
+    margin-bottom: 1.5mm;
   }
 
   .resume-banner h1 em {
@@ -3677,52 +3680,48 @@ h2 {
   }
 
   .resume-tagline {
-    font-size: 9pt;
-    margin-bottom: 3mm;
-    line-height: 1.42;
+    font-size: 8.2pt;
+    margin-bottom: 2mm;
+    line-height: 1.35;
     max-width: none;
   }
 
   .resume-metrics {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 2mm;
+    gap: 1.5mm;
   }
 
   .resume-metrics div {
-    padding: 2mm 2.2mm;
+    padding: 1.5mm 1.8mm;
   }
 
   .resume-metrics dt {
-    font-size: 6pt;
+    font-size: 5.8pt;
     letter-spacing: 0.05em;
     color: #c8ff47 !important;
   }
 
   .resume-metrics dd {
-    font-size: 8pt;
-    line-height: 1.25;
+    font-size: 7.4pt;
+    line-height: 1.22;
   }
 
   .resume-body {
-    flex: 1;
     display: grid;
-    grid-template-columns: 68mm minmax(0, 1fr);
-    gap: 4mm;
-    align-items: stretch;
-    min-height: 0;
+    grid-template-columns: 64mm minmax(0, 1fr);
+    gap: 3mm;
+    align-items: start;
   }
 
   .resume-rail,
   .resume-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 2.6mm;
-    height: 100%;
+    display: grid;
+    gap: 2mm;
+    align-content: start;
   }
 
   .resume-panel {
-    padding: 2.8mm 3mm;
+    padding: 2.2mm 2.5mm;
     border-radius: 2mm;
     background: rgba(11, 13, 12, 0.72) !important;
     break-inside: avoid;
@@ -3734,8 +3733,8 @@ h2 {
   }
 
   .resume-panel h2 {
-    margin-bottom: 1.8mm;
-    font-size: 7pt;
+    margin-bottom: 1.2mm;
+    font-size: 6.6pt;
     letter-spacing: 0.06em;
     color: #c8ff47 !important;
   }
@@ -3748,95 +3747,96 @@ h2 {
   .resume-bullets li,
   .resume-contact a,
   .resume-lang-list li {
-    font-size: 8.4pt;
-    line-height: 1.38;
+    font-size: 7.8pt;
+    line-height: 1.32;
     color: #e8e6de !important;
   }
 
   .resume-contact li {
-    padding: 1.2mm 0;
+    padding: 0.8mm 0;
   }
 
   .resume-contact span,
   .resume-entry time,
   .resume-meta {
-    font-size: 6.6pt;
+    font-size: 6.2pt;
     letter-spacing: 0.04em;
     color: #c8ff47 !important;
   }
 
   .resume-tags {
-    gap: 1.4mm;
+    gap: 1mm;
   }
 
   .resume-tags span {
-    padding: 0.8mm 1.6mm;
-    font-size: 6.8pt;
+    padding: 0.5mm 1.2mm;
+    font-size: 6.2pt;
   }
 
   .resume-bullets li,
   .resume-entry li {
-    margin-top: 1mm;
+    margin-top: 0.6mm;
   }
 
   .resume-sub {
-    margin-top: 1mm;
-    margin-left: 3mm;
+    margin-top: 0.6mm;
+    margin-left: 2.5mm;
   }
 
   .resume-sub li {
-    font-size: 8pt;
+    font-size: 7.4pt;
   }
 
   .resume-entry + .resume-entry {
-    margin-top: 2.5mm;
-    padding-top: 2.5mm;
+    margin-top: 1.8mm;
+    padding-top: 1.8mm;
     border-top: 1px solid rgba(243, 241, 233, 0.08);
   }
 
   .resume-entry h3 {
-    font-size: 9pt;
+    font-size: 8.2pt;
   }
 
   .resume-entry-head {
-    margin-bottom: 1.5mm;
+    margin-bottom: 1mm;
   }
 
   .resume-product-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 2.5mm;
+    gap: 2mm;
   }
 
   .resume-product-grid article {
-    padding: 2.5mm;
+    padding: 2mm;
   }
 
   .resume-product-grid h3 {
-    font-size: 8.6pt;
+    font-size: 7.8pt;
   }
 
   .resume-product-grid a {
-    font-size: 7.6pt;
-    margin-top: 1.5mm;
+    font-size: 7pt;
+    margin-top: 1mm;
+    margin-right: 0.5rem;
   }
 
   .resume-panel-split {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3mm;
+    gap: 2mm;
   }
 
   .resume-products-note {
-    font-size: 7.6pt;
-    margin-bottom: 2mm;
+    font-size: 7pt;
+    margin-bottom: 1.5mm;
     color: #a8aea8 !important;
   }
 
   .badge-live,
   .badge-private,
   .badge-personal {
-    font-size: 6pt;
-    padding: 0.6mm 1.4mm;
+    font-size: 5.6pt;
+    padding: 0.4mm 1.1mm;
   }
 
   .badge-personal {
