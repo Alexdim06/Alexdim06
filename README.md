@@ -11,7 +11,7 @@
 
   <a href="https://alexdim06.github.io/Alexdim06/"><img src="https://img.shields.io/badge/PORTFOLIO-C8FF47?style=for-the-badge&logo=googlechrome&logoColor=10130C" alt="Portfolio" /></a>
   <a href="https://systemaweb.com/"><img src="https://img.shields.io/badge/UVE_LIVE-FF785A?style=for-the-badge&logo=firefoxbrowser&logoColor=10130C" alt="UVE live product" /></a>
-  <a href="https://www.linkedin.com/in/aleksandar-dimitrov-pya16/"><img src="https://img.shields.io/badge/LINKEDIN-111513?style=for-the-badge&logo=linkedin&logoColor=C8FF47" alt="LinkedIn" /></a>
+  <a href="https://www.linkedin.com/in/aleksandar-dimitrov-web/"><img src="https://img.shields.io/badge/LINKEDIN-111513?style=for-the-badge&logo=linkedin&logoColor=C8FF47" alt="LinkedIn" /></a>
   <a href="mailto:alex.06dimitrov@gmail.com"><img src="https://img.shields.io/badge/LET'S_TALK-111513?style=for-the-badge&logo=gmail&logoColor=C8FF47" alt="Email Aleksandar" /></a>
 
   <br /><br />
