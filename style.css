@@ -2012,15 +2012,20 @@ h2 {
 .resume-stage {
   position: relative;
   z-index: 1;
-  width: min(860px, calc(100% - 32px));
+  width: min(210mm, calc(100% - 32px));
   margin: 0 auto;
-  padding: 1.25rem 0 4rem;
+  padding: 1rem 0 2rem;
 }
 
 .resume-doc {
   position: relative;
   overflow: hidden;
-  padding: 1.35rem 1.4rem 1.5rem;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  width: 100%;
+  min-height: 297mm;
+  box-sizing: border-box;
+  padding: 1.35rem 1.4rem 1.35rem;
   border: 1px solid rgba(200, 255, 71, 0.22);
   border-radius: 20px;
   background:
@@ -2183,15 +2188,29 @@ h2 {
   z-index: 1;
   display: grid;
   grid-template-columns: 240px minmax(0, 1fr);
-  gap: 0.85rem;
-  align-items: start;
+  gap: 0.9rem;
+  align-items: stretch;
+  align-self: stretch;
+  min-height: 0;
+  height: 100%;
 }
 
 .resume-rail,
 .resume-main {
-  display: grid;
-  gap: 0.6rem;
-  align-content: start;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  height: 100%;
+  min-height: 0;
+}
+
+.resume-rail .resume-panel:last-child,
+.resume-main .resume-panel:last-child {
+  flex: 1 1 auto;
+}
+
+.resume-main .resume-panel:last-child .resume-product-grid {
+  margin-top: 0.15rem;
 }
 
 .resume-bullets-compact li + li {
@@ -2502,8 +2521,9 @@ h2 {
   z-index: 1;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.75rem;
-  margin-top: 0.85rem;
+  gap: 0.8rem;
+  margin-top: 0.9rem;
+  align-self: end;
 }
 
 .resume-panel-wide {
@@ -2513,8 +2533,13 @@ h2 {
 .resume-bottom .resume-panel {
   display: flex;
   flex-direction: column;
-  min-height: 6.5rem;
-  padding: 0.85rem 0.95rem;
+  min-height: 7.25rem;
+  padding: 0.9rem 1rem;
+}
+
+.resume-bottom .resume-panel-wide {
+  min-height: 0;
+  padding: 0.85rem 1rem;
 }
 
 .resume-bottom .resume-panel h2 {
@@ -2525,16 +2550,16 @@ h2 {
 .resume-bottom .resume-lang-list li,
 .resume-bottom .resume-panel > p {
   font-size: 0.76rem;
-  line-height: 1.45;
+  line-height: 1.48;
 }
 
 .resume-bottom .resume-bullets li {
-  padding-top: 0.28rem;
-  padding-bottom: 0.28rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
 }
 
 .resume-bottom .resume-lang-list li {
-  padding: 0.42rem 0;
+  padding: 0.45rem 0;
 }
 
 .resume-bottom .resume-bullets {
@@ -2559,15 +2584,42 @@ html.pdf-export .resume-stage {
 }
 
 html.pdf-export .resume-doc {
-  min-height: 0;
-  padding: 5.5mm 6mm 6mm;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  width: 210mm;
+  min-height: 297mm;
+  padding: 7mm 8mm 8mm;
   border: none;
   border-radius: 0;
   box-shadow: none;
 }
 
+html.pdf-export .resume-body {
+  align-self: stretch;
+  height: 100%;
+  gap: 4mm;
+}
+
+html.pdf-export .resume-rail,
+html.pdf-export .resume-main {
+  display: flex;
+  flex-direction: column;
+  gap: 3mm;
+  height: 100%;
+}
+
+html.pdf-export .resume-rail .resume-panel:last-child,
+html.pdf-export .resume-main .resume-panel:last-child {
+  flex: 1 1 auto;
+}
+
 html.pdf-export .resume-bottom {
-  margin-top: 0.55rem;
+  margin-top: 3mm;
+  gap: 3mm;
+}
+
+html.pdf-export .resume-bottom .resume-panel:not(.resume-panel-wide) {
+  min-height: 24mm;
 }
 
 html.pdf-export .reveal {
@@ -3657,10 +3709,13 @@ html.pdf-export .reveal {
 
   .resume-doc {
     position: static !important;
+    display: grid !important;
+    grid-template-rows: auto minmax(0, 1fr) auto !important;
     width: 210mm !important;
     max-width: 210mm !important;
+    min-height: 297mm !important;
     overflow: visible !important;
-    padding: 6mm 7mm 7mm !important;
+    padding: 7mm 8mm 8mm !important;
     box-sizing: border-box;
     border: none;
     border-radius: 0;
@@ -3673,10 +3728,10 @@ html.pdf-export .reveal {
   .resume-banner {
     display: grid;
     grid-template-columns: 24mm minmax(0, 1fr);
-    gap: 3mm 4mm;
+    gap: 3.5mm 4.5mm;
     align-items: start;
-    margin-bottom: 3mm;
-    padding-bottom: 3mm;
+    margin-bottom: 4mm;
+    padding-bottom: 4mm;
     border-bottom: 1px solid rgba(200, 255, 71, 0.16);
   }
 
@@ -3724,9 +3779,9 @@ html.pdf-export .reveal {
   }
 
   .resume-tagline {
-    font-size: 7.2pt;
+    font-size: 7.6pt;
     margin-bottom: 0;
-    line-height: 1.32;
+    line-height: 1.36;
     max-width: none;
     color: #c4c6bf !important;
   }
@@ -3734,19 +3789,29 @@ html.pdf-export .reveal {
   .resume-body {
     display: grid;
     grid-template-columns: 58mm minmax(0, 1fr);
-    gap: 3mm;
-    align-items: start;
+    gap: 4mm;
+    align-items: stretch;
+    align-self: stretch;
+    height: 100%;
+    min-height: 0;
   }
 
   .resume-rail,
   .resume-main {
-    display: grid;
-    gap: 2mm;
-    align-content: start;
+    display: flex;
+    flex-direction: column;
+    gap: 3mm;
+    height: 100%;
+    min-height: 0;
+  }
+
+  .resume-rail .resume-panel:last-child,
+  .resume-main .resume-panel:last-child {
+    flex: 1 1 auto;
   }
 
   .resume-panel {
-    padding: 2mm 2.4mm;
+    padding: 2.6mm 3mm;
     border-radius: 1.6mm;
     border: 1px solid rgba(243, 241, 233, 0.1);
     background: rgba(14, 18, 16, 0.95) !important;
@@ -3779,9 +3844,10 @@ html.pdf-export .reveal {
   .resume-bullets li,
   .resume-contact a,
   .resume-lang-list li,
-  .resume-inline-availability {
-    font-size: 7pt;
-    line-height: 1.28;
+  .resume-inline-availability,
+  .resume-bottom .resume-panel > p {
+    font-size: 7.4pt;
+    line-height: 1.34;
     color: #e4e2da !important;
   }
 
@@ -3868,8 +3934,19 @@ html.pdf-export .reveal {
   .resume-bottom {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2mm;
-    margin-top: 2mm;
+    gap: 3mm;
+    margin-top: 3mm;
+    align-self: end;
+  }
+
+  .resume-bottom .resume-panel:not(.resume-panel-wide) {
+    min-height: 24mm;
+    padding: 3mm 3.2mm !important;
+  }
+
+  .resume-bottom .resume-panel-wide {
+    min-height: 0;
+    padding: 2.8mm 3.2mm !important;
   }
 
   .resume-panel-wide {
