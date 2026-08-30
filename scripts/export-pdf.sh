@@ -52,9 +52,16 @@ fi
   "$URL"
 
 SIZE=$(wc -c < "$PDF" | tr -d ' ')
+PAGES=$(mdls -raw -name kMDItemNumberOfPages "$PDF" 2>/dev/null || echo "?")
+
 if [[ "$SIZE" -lt 50000 ]]; then
   echo "PDF looks too small (${SIZE} bytes) — export may have failed." >&2
   exit 1
 fi
 
-echo "PDF written to assets/Aleksandar-Dimitrov-CV.pdf (${SIZE} bytes)"
+if [[ "$PAGES" != "?" && "$PAGES" -gt 3 ]]; then
+  echo "PDF has ${PAGES} pages — expected 1–3." >&2
+  exit 1
+fi
+
+echo "PDF written to assets/Aleksandar-Dimitrov-CV.pdf (${SIZE} bytes, ${PAGES} page(s))"
