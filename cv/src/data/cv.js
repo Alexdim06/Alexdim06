@@ -1,30 +1,30 @@
-export const siteBase = import.meta.env.BASE_URL.replace(/\/$/, '') || '.';
-export const rootBase = import.meta.env.PROD ? '/Alexdim06' : '..';
+export const assetBase = import.meta.env.BASE_URL;
 
 export const cv = {
   name: 'Aleksandar Dimitrov',
   status: 'Available',
-  role: 'Full-stack developer · Angular & Strapi',
+  role: 'Full-stack developer · Vue, Angular & Strapi',
   tagline:
     'I ship maintainable products — interface, content architecture, DevOps delivery, and frontend mentoring in one role.',
   metrics: [
     { label: 'Products', value: '2 flagship builds' },
-    { label: 'Stack', value: 'Angular + Strapi' },
+    { label: 'Stack', value: 'Vue + Angular + Strapi' },
     { label: 'Leadership', value: 'Frontend mentoring' },
     { label: 'Work', value: 'Remote · Hybrid · Sofia' },
   ],
   contact: [
     { label: 'Email', href: 'mailto:alex.06dimitrov@gmail.com', text: 'alex.06dimitrov@gmail.com' },
-    { label: 'Portfolio', href: `${rootBase}/`, text: 'alexdim06.github.io' },
-    { label: 'GitHub', href: 'https://github.com/Alexdim06', text: 'github.com/Alexdim06' },
+    { label: 'Portfolio', href: `${assetBase}`, text: 'alexdim06.github.io' },
+    { label: 'GitHub', href: 'https://github.com/Alexdim06', text: 'github.com/Alexdim06', external: true },
     {
       label: 'LinkedIn',
       href: 'https://www.linkedin.com/in/aleksandar-dimitrov-pya16/',
       text: '/in/aleksandar-dimitrov-pya16',
+      external: true,
     },
   ],
   stack: [
-    'Angular', 'Vue', 'Strapi', 'TypeScript', 'JavaScript', 'React', 'Node.js', 'Express',
+    'Vue', 'Angular', 'Strapi', 'TypeScript', 'JavaScript', 'React', 'Node.js', 'Express',
     'HTML', 'CSS', 'PostgreSQL', 'MongoDB', 'Prisma', 'WebSocket', 'Git', 'Docker', 'Agile', 'Bootstrap',
   ],
   security: [
@@ -34,7 +34,7 @@ export const cv = {
   ],
   focus: [
     'PostgreSQL & MongoDB data layers',
-    'Production Angular + Strapi systems',
+    'Production Vue, Angular + Strapi systems',
     'CMS & API architecture',
     'DevOps-minded delivery',
     'Frontend coordination & mentoring',
@@ -46,13 +46,13 @@ export const cv = {
   ],
   availability: 'Available for full-stack roles. EU remote or Sofia hybrid/on-site.',
   profile:
-    'Full-stack developer at Industria Technology in Sofia — from business analysis into software delivery on the same team. I work with Angular, Vue, and Strapi across frontend, content systems, and APIs, with PostgreSQL and MongoDB in production-shaped stacks. I also contribute to DevOps workflows, security-minded server practices, and frontend mentoring.',
+    'Full-stack developer at Industria Technology in Sofia — from business analysis into software delivery on the same team. I work with Vue, Angular, and Strapi across frontend, content systems, and APIs, with PostgreSQL and MongoDB in production-shaped stacks. I also contribute to DevOps workflows, security-minded server practices, and frontend mentoring.',
   experience: [
     {
       title: 'Full-Stack Developer · Industria Technology',
       period: '2025 — Present · Sofia',
       bullets: [
-        'Deliver advanced Angular, Vue, and Strapi solutions across UI, CMS architecture, and backend integration.',
+        'Deliver advanced Vue, Angular, and Strapi solutions across UI, CMS architecture, and backend integration.',
         'Work with PostgreSQL and MongoDB in API and content-driven systems.',
         'Support DevOps workflows, firewalls, and security practices so releases stay predictable.',
         'Coordinate frontend developers and help the team ship with consistent quality.',
@@ -74,7 +74,7 @@ export const cv = {
       meta: 'React · Express · PostgreSQL · Prisma · WebSocket · JWT · Stripe-ready',
       description:
         'Real-time workflow platform with secure auth, live sync, analytics, and monetization-ready architecture.',
-      href: `${rootBase}/projects/nestsyncflow.html`,
+      href: `${assetBase}projects/nestsyncflow.html`,
       external: false,
     },
     {
@@ -91,7 +91,7 @@ export const cv = {
   certificates: 'JavaScript Fundamentals · HTML & CSS Advanced · Agile / Scrum Foundations',
   howIWork:
     'Clear trade-offs, readable delivery, and communication that helps teams move — from product framing to shipped code.',
-  pdfUrl: `${rootBase}/assets/Aleksandar-Dimitrov-CV.pdf`,
-  portrait: `${rootBase}/assets/profile.png`,
-  portraitWebp: `${rootBase}/assets/profile-480.webp`,
+  pdfUrl: `${assetBase}assets/Aleksandar-Dimitrov-CV.pdf`,
+  portrait: `${assetBase}assets/profile.png`,
+  portraitWebp: `${assetBase}assets/profile-480.webp`,
 };

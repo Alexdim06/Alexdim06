@@ -4,9 +4,9 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   plugins: [vue(), tailwindcss()],
-  base: './',
+  base: '/Alexdim06/',
   build: {
-    outDir: '../resume',
+    outDir: 'dist',
     emptyOutDir: true,
   },
 });
