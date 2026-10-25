@@ -1,3 +1,5 @@
+<!-- CV maintenance: edit resume/index.html, then run scripts/export-pdf.sh.
+     See scripts/requirements-pdf.txt for the PDF export dependencies. -->
 <div align="center">
   <a href="https://alexdim06.github.io/Alexdim06/">
     <img src="https://cdn.jsdelivr.net/gh/Alexdim06/Alexdim06@dfb64ebbc7313b5bfec09e518d961d6ec79013a9/assets/readme-header.svg" width="100%" alt="Aleksandar Dimitrov — Full-Stack Developer" />
